@@ -23,6 +23,8 @@ const GanttChart = function () {
     // special_works: ['2024-09-29'], // 特殊(如补,如果在周六周日则不显示灰色,并在右上角显示”班“字样)
     special_works: [], // 特殊(如补班,如果在周六周日则不显示灰色,并在右上角显示”班“字样)
     // week_days: ['日', '一', '二', '三', '四', '五', '六'],// 星期几
+    middleChange: [],// 用于编辑时临时存储下标的数组，为了防止编辑后提交不了的数据恢复
+    changeCacheArr: [],// 缓存的修改数据,保留修改的下标
 
     scroll_top_left: 0, // 滚动条位置-左侧渲染区
     scroll_top_right: 0, // 滚动条位置-右侧渲染区
@@ -33,11 +35,13 @@ const GanttChart = function () {
 
     taskClickCallback: null, // 任务点击回调函数
 
+
+
     // taskResizeCallback: null, // 任务调整大小回调函数
     // taskDragCallback: null, // 任务拖拽回调函数
     // taskDeleteCallback: null, // 任务删除回调函数
 
-    floatingPanelContent: function () { },// 悬浮面板返回函数
+    floatingPanelContent: function () { return '' },// 悬浮面板返回函数
 
     // 获取两个日期之间的数组
     getDatesBetween: function (startTime, endTime) {
@@ -237,6 +241,65 @@ const GanttChart = function () {
       return totalWidth;
     },
 
+    // 左侧行内容html
+    leftLineHtml: function (item_1, index_1, item_2, index_2) {
+      let html = '';
+      const TextAlign = item_2.align || 'left';
+      if (item_2.template) {
+        html = '<div class="gantt_left_cell_item" data-index_1=\'' + index_1 + '\' data-index_2=\'' + index_2 + '\' style="width:' +
+          item_2.width +
+          'px;text-align:' + TextAlign + ';">' +
+          (item_2.template(item_1, item_2) || "") +
+          '</div>';
+      } else {
+        html = '<div class="gantt_left_cell_item" data-index_1=\'' + index_1 + '\' data-index_2=\'' + index_2 + '\' style="width:' +
+          item_2.width +
+          'px;text-align:' + TextAlign + ';">' +
+          item_1[item_2.field] +
+          '</div>';
+      }
+      return html;
+    },
+
+    // 右侧渲染维护时间
+    rightMaintenanceHtml: function (item_1) {
+      let maintenanceHtml = '';
+      const maintenanceTime = item_1.maintenanceTime || []; // 维护时间数组
+      for (let i = 0; i < maintenanceTime.length; i++) {
+        let start_time = maintenanceTime[i].start_time; // 开始时间
+        let end_time = maintenanceTime[i].end_time; // 结束时间
+
+        // left计算
+        const left = _this.calculateLeftPosition(task_start_end_data[0], start_time);
+        // width计算
+        const curWidth = _this.calculateTaskWidth(start_time, end_time);
+
+        maintenanceHtml += '<div class="gantt_maintenance_cell" style="left:' + left + 'px;width:' + curWidth + 'px;"></div>'
+      }
+      return maintenanceHtml;
+    },
+
+    // 右侧任务内容html
+    rightTaskHtml: function (item_1, index_1) {
+      const _this = this;
+      const task_start_end_data = this.task_start_end_data || [];
+      let taskHtml = '';
+
+      const taskArr = item_1.taskArr || []; // 任务数组
+      for (let i = 0; i < taskArr.length; i++) {
+        let start_time = taskArr[i].start_time; // 开始时间
+        let end_time = taskArr[i].end_time; // 结束时间
+
+        // left计算
+        const left = _this.calculateLeftPosition(task_start_end_data[0], start_time);
+        // width计算
+        const curWidth = _this.calculateTaskWidth(start_time, end_time);
+        taskHtml += '<div class="gantt_task_cell" data-index_1=\'' + index_1 + '\' data-index_2=\'' + i + '\' style="left:' + left + 'px;width:' + curWidth + 'px;"></div>';
+      }
+
+      return taskHtml;
+    },
+
     // 渲染行数据
     initLine: function () {
       const _this = this;
@@ -257,22 +320,7 @@ const GanttChart = function () {
         // 左侧渲染
         let html_left = '<div class="gantt_left_line" data-index_1=\'' + index_1 + '\'>';
         columns.forEach(function (item_2, index_2) {
-          const TextAlign = item_2.align || 'left';
-          if (item_2.template) {
-            html_left +=
-              '<div class="gantt_left_cell_item" data-index_1=\'' + index_1 + '\' data-index_2=\'' + index_2 + '\' style="width:' +
-              item_2.width +
-              'px;text-align:' + TextAlign + ';">' +
-              (item_2.template(item_1, item_2) || "") +
-              '</div>';
-          } else {
-            html_left +=
-              '<div class="gantt_left_cell_item" data-index_1=\'' + index_1 + '\' data-index_2=\'' + index_2 + '\' style="width:' +
-              item_2.width +
-              'px;text-align:' + TextAlign + ';">' +
-              item_1[item_2.field] +
-              '</div>';
-          }
+          html_left += _this.leftLineHtml(item_1, index_1, item_2, index_2);
         });
         html_left += '</div>';
         const fragment_leftLine = document.createDocumentFragment();
@@ -300,35 +348,14 @@ const GanttChart = function () {
 
         // 右侧渲染--维护时间
         let maintenanceHtml = '<div class="gantt_maintenance_group">';
-        const maintenanceTime = item_1.maintenanceTime || []; // 维护时间数组
-        for (let i = 0; i < maintenanceTime.length; i++) {
-          let start_time = maintenanceTime[i].start_time; // 开始时间
-          let end_time = maintenanceTime[i].end_time; // 结束时间
-
-          // left计算
-          const left = _this.calculateLeftPosition(task_start_end_data[0], start_time);
-          // width计算
-          const curWidth = _this.calculateTaskWidth(start_time, end_time);
-
-          maintenanceHtml += '<div class="gantt_maintenance_cell" style="left:' + left + 'px;width:' + curWidth + 'px;"></div>'
-        }
+        maintenanceHtml += _this.rightMaintenanceHtml(item_1);
 
         // 右侧渲染--任务
         let taskHtml = '<div class="gantt_task_group">'; // 任务组的渲染
-        const taskArr = item_1.taskArr || []; // 任务数组
-        for (let i = 0; i < taskArr.length; i++) {
-          let start_time = taskArr[i].start_time; // 开始时间
-          let end_time = taskArr[i].end_time; // 结束时间
-
-          // left计算
-          const left = _this.calculateLeftPosition(task_start_end_data[0], start_time);
-          // width计算
-          const curWidth = _this.calculateTaskWidth(start_time, end_time);
-          taskHtml += '<div class="gantt_task_cell" data-index_1=\'' + index_1 + '\' data-index_2=\'' + i + '\' style="left:' + left + 'px;width:' + curWidth + 'px;"></div>';
-        }
+        taskHtml += _this.rightTaskHtml(item_1, index_1);
 
         // 右侧渲染
-        let html_right = '<div class="gantt_right_line">';
+        let html_right = '<div class="gantt_right_line" data-index_1=\'' + index_1 + '\'>';
         html_right += groupHtml + '</div>';
         html_right += maintenanceHtml + '</div>';
         html_right += taskHtml + '</div>';
@@ -386,25 +413,23 @@ const GanttChart = function () {
 
     // 任务的拖拽事件
     taskDragEvent: function () {
-      var offsetX, offsetY;
+      let offsetX;
 
       $(this.el).on('mousedown', '.gantt_task_cell', function (e) {
         // 获取父元素的偏移量
-        var $parent = $(this).parent();
-        var parentOffset = $parent.offset();
+        let $parent = $(this).parent();
+        let parentOffset = $parent.offset();
 
         // 计算鼠标相对父元素的偏移量
         offsetX = e.clientX - (parentOffset.left + $(this).position().left);
         offsetY = e.clientY - (parentOffset.top + $(this).position().top);
 
-        var $cell = $(this);
+        let $cell = $(this);
 
         // 设置鼠标移动和松开事件
         $(document).on('mousemove.drag', function (e) {
-          // 更新元素的位置相对于父元素
           $cell.css({
             left: (e.clientX - parentOffset.left - offsetX) + 'px',
-            // top: (e.clientY - parentOffset.top - offsetY) + 'px'  // 如果需要上下拖动，可以保留这一行
           });
         });
 
@@ -421,6 +446,33 @@ const GanttChart = function () {
 
     // 行双击编辑事件
     lineDoubleClickEdit: function () { },
+
+    // 更新行显示
+    updateLine: function (obj) {
+    },
+
+    // 任务编辑
+    updateTask: function (obj) {
+      // 任务编辑事件
+      _this.data[index_1].taskArr[index_2].start_time = obj.start_time;
+      _this.data[index_1].taskArr[index_2].end_time = obj.end_time;
+      if (this.view_type === 'working') {// 工序视图
+        // 更改行数据时间
+        _this.data[index_1].planStartTime = obj.start_time;
+        _this.data[index_1].planEndTime = obj.end_time;
+        _this.data[index_1].duration = calculateMinutes(obj.start_time, obj.end_time);
+        // 更改视图
+
+        // 更改左侧数据
+      } else if (this.view_type === 'machine') {
+        // 机器视图
+      }
+      // index_1: index_1,
+      //   index_2: index_2,
+      //   start_time: $('#task_start_time').val(),
+      //   end_time: $('#task_end_time').val(),
+
+    },
 
     // 任务双击编辑
     taskDobuleClickEdit: function () {
@@ -442,7 +494,7 @@ const GanttChart = function () {
       $(this.el).on('mousemove', '.gantt_task_cell, .gantt_left_cell_item', debounce(function (event) {
         const index_1 = Number($(this).attr('data-index_1'));
         const gantt_tooltip = $(_this.el).find('.gantt_tooltip');
-        console.log(334, _this.data[index_1], index_1);
+        // console.log(334, _this.data[index_1], index_1);
         let plane_html = _this.floatingPanelContent(_this.data[index_1] || {});
         $(gantt_tooltip).html(plane_html);
 

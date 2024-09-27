@@ -78,7 +78,7 @@ layui.use(['layer', 'form', 'laydate'], function () {
         // },
       ],
       // 任务块的点击事件
-      taskClickCallback: function (curEl, insObj) {
+      taskClickCallback: function (curEl, insObj, updateTask) {
         const index_1 = Number($(curEl).attr('data-index_1'));
         const index_2 = Number($(curEl).attr('data-index_2'));
         const lineObj = insObj.data[index_1] || {};// 获取当前行数据
@@ -185,7 +185,6 @@ layui.use(['layer', 'form', 'laydate'], function () {
       },
       // 悬浮面板内容
       floatingPanelContent: function (lineObj) {
-        console.log(`index.js 188 [lineObj]`, lineObj);
         let html = '';
         html += '<div class="gantt-plane-line">';
         html += ' <span class="gantt-plane-title">工单名称：</span>';
@@ -238,6 +237,13 @@ layui.use(['layer', 'form', 'laydate'], function () {
         return false;
       }
       console.log(`index.js 202 [form.val('testForm')]`, form.val('testForm'));
+
+      Instance_ganttChart.updateTask({
+        index_1: index_1,
+        index_2: index_2,
+        start_time: $('#task_start_time').val(),
+        end_time: $('#task_end_time').val(),
+      });
 
       layer.close(editIndex);
     });

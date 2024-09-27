@@ -124,6 +124,26 @@ function minutesToHours(minutes) {
 //   console.log(`Test case ${index + 1}:`, result === testCase.expected ? 'Passed' : `Failed. Expected ${testCase.expected}, got ${result}`);
 // });
 
+// 计算时间段有多少分钟
+function calculateMinutes(startTime, endTime) {
+  // 将时间字符串转换为 Date 对象
+  const startDate = new Date(startTime.replace(/-/g, '/'));
+  const endDate = new Date(endTime.replace(/-/g, '/'));
+
+  // 计算时间差（毫秒）
+  const timeDifference = endDate - startDate;
+
+  // 将时间差转换为分钟
+  const minutesDifference = Math.floor(timeDifference / (1000 * 60));
+
+  return minutesDifference;
+}
+// 使用示例
+// const start = '2024-10-10 10:10';
+// const end = '2024-10-10 12:30';
+// const minutes = calculateMinutes(start, end);
+// console.log(`时间差为：${minutes} 分钟`);
+
 // 以分钟生成结束时间
 function getTaskEndTime(startTime, duration) {
   // 将开始时间字符串转换为 Date 对象
