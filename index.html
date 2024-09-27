@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Document</title>
+  <link
+    rel="stylesheet"
+    href="./layui/css/layui.css"
+  >
+  <link
+    rel="stylesheet"
+    href="./remixicon/remixicon.css"
+  >
+  <link
+    rel="stylesheet"
+    href="./static/index.css"
+  />
+
+  <style>
+    body {
+      padding: 10px;
+    }
+
+    #gantt_here {
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="gantt_here"></div>
+
+  <!-- 编辑时弹出框表头 -->
+  <div
+    id="edit_popup_title"
+    style="display: none;"
+  >
+    <div class="laymy-popup-title">
+      <div class="laymy-popup-title-left">
+        <span class="laymy-popup-back"><i class="ri-arrow-left-line"></i></span>
+        <div class="laymy-popup-title-text">编辑</div>
+      </div>
+      <div class="laymy-popup-title-right">
+        <button
+          type="button"
+          class="layui-btn"
+          id="submitEdit"
+        >提交</button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="infoEdit"
+    class="laymy-pop laymy-pop-content"
+  >
+    <form
+      class="layui-form"
+      lay-filter="testForm"
+    >
+      <input
+        type="text"
+        style="display: none;"
+        id="edit_id"
+      />
+      <input
+        type="text"
+        style="display: none;"
+        id="edit_id"
+      />
+      <table
+        class="layui-table table-form"
+        lay-size="sm"
+        lay-skin="nob"
+        style="table-layout: fixed;"
+      >
+        <colgroup>
+          <col width="150">
+          <col width="">
+        </colgroup>
+
+        <tr>
+          <td class="text-right">订单名称：</td>
+          <td>
+            <div
+              class="table-item-desc"
+              id="order_name"
+            >xxxxx</div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-right">工序名称：</td>
+          <td>
+            <div
+              class="table-item-desc"
+              id="processes_name"
+            >xxxxx</div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-right">机器：</td>
+          <td>
+            <div
+              class="table-item-desc"
+              id="machine_name"
+            >xxxxx</div>
+          </td>
+        </tr>
+
+        <tr>
+          <td
+            class="requiredlabel text-right"
+            id="task_start_time_name"
+          >开始时间：</td>
+          <td id="task_start_time_td">
+            <input
+              name="start_time"
+              type="text"
+              class="layui-input"
+              id="task_start_time"
+              placeholder=""
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td class="requiredlabel text-right">结束时间：</td>
+          <td>
+            <input
+              name="end_time"
+              type="text"
+              class="layui-input"
+              id="task_end_time"
+              placeholder=""
+            >
+          </td>
+        </tr>
+      </table>
+
+
+    </form>
+  </div>
+
+  <!-- 悬浮面板内容区 -->
+  <div
+    id="laymy-panel-content"
+    style="display: none;"
+  >
+    <div class="gantt-plane-line">
+      <span class="gantt-plane-title">工单名称：</span>
+      <span class="gantt-plane-text"></span>
+    </div>
+
+    <div class="gantt-plane-line">
+      <span class="gantt-plane-title">工序名称：</span>
+      <span class="gantt-plane-text"></span>
+    </div>
+
+    <div class="gantt-plane-line">
+      <span class="gantt-plane-title">机器：</span>
+      <span class="gantt-plane-text"></span>
+    </div>
+
+    <div class="gantt-plane-line">
+      <span class="gantt-plane-title">开始时间：</span>
+      <span class="gantt-plane-text"></span>
+    </div>
+
+    <div class="gantt-plane-line">
+      <span class="gantt-plane-title">持续时间：</span>
+      <span class="gantt-plane-text"></span>
+    </div>
+  </div>
+
+  <script src="./static/jquery.min.js"></script>
+  <script src="./layui/layui.js"></script>
+  <!-- 引入公共函数js -->
+  <script src="./static/public.js"></script>
+  <!-- 引入gantt插件 -->
+  <script src="./static/ganttplugin.js"></script>
+  <!-- 调用的js -->
+  <script src="./static/index.js"></script>
+</body>
+
+</html>
