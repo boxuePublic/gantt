@@ -448,11 +448,27 @@ const GanttChart = function () {
     lineDoubleClickEdit: function () { },
 
     // 更新行显示
-    updateLine: function (obj) {
+    updateLine: function (index_1) {
+      const _this = this;
+      const item_1 = _this.data[index_1];
+
+      // 更新左侧列表显示
+      let html_left = '';
+      _this.columns.forEach(function (item_2, index_2) {
+        html_left += _this.leftLineHtml(item_1, index_1, item_2, index_2);
+      });
+      $(_this.el).find('.gantt_left_line[data-index_1=\'' + index_1 + '\']').html(html_left);
+
+      // 更新右侧任务显示
+      const taskHtml = _this.rightTaskHtml(item_1, index_1);
+      $(_this.el).find('.gantt_right_line[data-index_1=\'' + index_1 + '\']').find('.gantt_task_group').html(taskHtml);
     },
 
     // 任务编辑
     updateTask: function (obj) {
+      const _this = this;
+      const index_1 = obj.index_1;
+      const index_2 = obj.index_2;
       // 任务编辑事件
       _this.data[index_1].taskArr[index_2].start_time = obj.start_time;
       _this.data[index_1].taskArr[index_2].end_time = obj.end_time;
@@ -461,17 +477,11 @@ const GanttChart = function () {
         _this.data[index_1].planStartTime = obj.start_time;
         _this.data[index_1].planEndTime = obj.end_time;
         _this.data[index_1].duration = calculateMinutes(obj.start_time, obj.end_time);
-        // 更改视图
-
-        // 更改左侧数据
+        // 更新行视图
+        _this.updateLine(index_1);
       } else if (this.view_type === 'machine') {
         // 机器视图
       }
-      // index_1: index_1,
-      //   index_2: index_2,
-      //   start_time: $('#task_start_time').val(),
-      //   end_time: $('#task_end_time').val(),
-
     },
 
     // 任务双击编辑

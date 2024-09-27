@@ -124,6 +124,12 @@ layui.use(['layer', 'form', 'laydate'], function () {
         //   $('#task_start_time').val(lineObj.planStartTime).attr('disabled', true);
         // }
 
+        const task_start_end_data = Instance_ganttChart.task_start_end_data || [];
+        const d1 = new Date(task_start_end_data[0] + ' 00:00');
+        const d2 = new Date();
+        const minDate = new Date(Math.max(d1.getTime(), d2.getTime()));
+        const task_start_end_data_last = task_start_end_data[task_start_end_data.length - 1] || '';// 
+
         // 渲染开始时间
         laydate.render({
           elem: '#task_start_time',
@@ -131,6 +137,8 @@ layui.use(['layer', 'form', 'laydate'], function () {
           type: 'datetime',
           value: lineObj.planStartTime,
           format: 'yyyy-MM-dd HH:mm',
+          min: CustomDateFtt(minDate, "yyyy-MM-dd hh:mm"),
+          max: CustomDateFtt(task_start_end_data_last, "yyyy-MM-dd hh:mm"),
           done: function (value, date) {
             if (new Date(value) > new Date($('#task_end_time').val())) {
               layer.msg('开始时间不能大于结束时间');
@@ -148,9 +156,10 @@ layui.use(['layer', 'form', 'laydate'], function () {
           elem: '#task_end_time',
           theme: 'ymdhm',
           type: 'datetime',
-          min: CustomDateFtt(new Date(), "yyyy-MM-dd hh:mm"),
           value: lineObj.planEndTime,
           format: 'yyyy-MM-dd HH:mm',
+          min: CustomDateFtt(minDate, "yyyy-MM-dd hh:mm"),
+          max: CustomDateFtt(task_start_end_data_last, "yyyy-MM-dd hh:mm"),
           done: function (value, date) {
             if (new Date(value) < new Date($('#task_start_time').val())) {
               layer.msg('结束时间不能小于开始时间');
