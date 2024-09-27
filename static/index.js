@@ -77,7 +77,7 @@ layui.use(['layer', 'form', 'laydate'], function () {
         //   },
         // },
       ],
-      // 任务快的点击事件
+      // 任务块的点击事件
       taskClickCallback: function (curEl, insObj) {
         const index_1 = Number($(curEl).attr('data-index_1'));
         const index_2 = Number($(curEl).attr('data-index_2'));
@@ -183,6 +183,37 @@ layui.use(['layer', 'form', 'laydate'], function () {
           },
         });
       },
+      // 悬浮面板内容
+      floatingPanelContent: function (lineObj) {
+        console.log(`index.js 188 [lineObj]`, lineObj);
+        let html = '';
+        html += '<div class="gantt-plane-line">';
+        html += ' <span class="gantt-plane-title">工单名称：</span>';
+        html += ' <span class="gantt-plane-text">' + (lineObj.order_name || '') + '</span>';
+        html += '</div>';
+
+        html += '<div class="gantt-plane-line">';
+        html += ' <span class="gantt-plane-title">工序名称：</span>';
+        html += ' <span class="gantt-plane-text">' + (lineObj.processes_name || '') + '</span>';
+        html += '</div>';
+
+        html += '<div class="gantt-plane-line">';
+        html += ' <span class="gantt-plane-title">执行机器：</span>';
+        html += ' <span class="gantt-plane-text">' + ((lineObj.machine || {}).name || '') + '</span>';
+        html += '</div>';
+
+        html += '<div class="gantt-plane-line">';
+        html += ' <span class="gantt-plane-title">开始时间：</span>';
+        html += ' <span class="gantt-plane-text">' + (lineObj.planStartTime || '') + '</span>';
+        html += '</div>';
+
+        html += '<div class="gantt-plane-line">';
+        html += ' <span class="gantt-plane-title">持续时间：</span>';
+        html += ' <span class="gantt-plane-text">' + minutesToHours(lineObj.duration) + 'h' + '</span>';
+        html += '</div>';
+
+        return html
+      }
     });
 
 

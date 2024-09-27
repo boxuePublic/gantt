@@ -356,9 +356,12 @@ $cell-border-color: #ebebeb;
   width: auto;
   .gantt-plane-title {
     flex: 0 1 auto;
+    font-weight: bold;
+    font-size: 12px;
   }
   .gantt-plane-text {
     flex: 1;
+    font-size: 12px;
   }
 }
 

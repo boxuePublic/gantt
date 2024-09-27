@@ -37,6 +37,8 @@ const GanttChart = function () {
     // taskDragCallback: null, // 任务拖拽回调函数
     // taskDeleteCallback: null, // 任务删除回调函数
 
+    floatingPanelContent: function () { },// 悬浮面板返回函数
+
     // 获取两个日期之间的数组
     getDatesBetween: function (startTime, endTime) {
       const dates = [];
@@ -258,7 +260,7 @@ const GanttChart = function () {
           const TextAlign = item_2.align || 'left';
           if (item_2.template) {
             html_left +=
-              '<div class="gantt_left_cell_item" style="width:' +
+              '<div class="gantt_left_cell_item" data-index_1=\'' + index_1 + '\' data-index_2=\'' + index_2 + '\' style="width:' +
               item_2.width +
               'px;text-align:' + TextAlign + ';">' +
               (item_2.template(item_1, item_2) || "") +
@@ -435,30 +437,32 @@ const GanttChart = function () {
     // 任务浮动面板
     taskFloatPanel: function () {
       const _this = this;
+
+      // 鼠标移动时显示提示框,使用 debounce
       $(this.el).on('mousemove', '.gantt_task_cell, .gantt_left_cell_item', debounce(function (event) {
         const index_1 = Number($(this).attr('data-index_1'));
-        // console.log(`ganttplugin.js 430 [index_1]`, index_1);
-
         const gantt_tooltip = $(_this.el).find('.gantt_tooltip');
-        let plane_html = '';
-        plane_html += '<div class="gantt-plane-line"><span class="gantt-plane-title">' + _this.data[index_1].order_name + '</span></div>';
+        console.log(334, _this.data[index_1], index_1);
+        let plane_html = _this.floatingPanelContent(_this.data[index_1] || {});
         $(gantt_tooltip).html(plane_html);
 
-        let panelX = event.pageX + 10; // 向右偏移10px
-        let panelY = event.pageY + 13; // 向下偏移13px
+        // 初始偏移值
+        let panelX = event.pageX + 8; // 向右偏移8px
+        let panelY = event.pageY + 10; // 向下偏移10px
 
-        // 获取视口宽高
-        const viewportWidth = $(window).width();
-        const viewportHeight = $(window).height();
+        // 获取父元素的边界矩形
+        const parentOffset = $(_this.el).offset();
+        const parentWidth = $(_this.el).outerWidth();
+        const parentHeight = $(_this.el).outerHeight();
 
-        // 检查面板是否超出右边界
-        if (panelX + gantt_tooltip.outerWidth() > viewportWidth) {
-          panelX = event.pageX - gantt_tooltip.outerWidth() - 10; // 向左偏移
+        // 检查提示框是否超出父元素的右边界
+        if (panelX + gantt_tooltip.outerWidth() > parentOffset.left + parentWidth) {
+          panelX = parentOffset.left + parentWidth - gantt_tooltip.outerWidth() - 8; // 调整以适应边界
         }
 
-        // 检查面板是否超出下边界
-        if (panelY + gantt_tooltip.outerHeight() > viewportHeight) {
-          panelY = event.pageY - gantt_tooltip.outerHeight() - 13; // 向上偏移
+        // 检查提示框是否超出父元素的底部边界
+        if (panelY + gantt_tooltip.outerHeight() > parentOffset.top + parentHeight) {
+          panelY = parentOffset.top + parentHeight - gantt_tooltip.outerHeight() - 10; // 调整以适应边界
         }
 
         // 设置 .gantt_tooltip 的位置
@@ -468,13 +472,13 @@ const GanttChart = function () {
         });
 
         gantt_tooltip.show();
-      }, 50)); // 设置300毫秒的防抖时间
+      }, 50)); // debounce 时间设置为50毫秒
 
-      // 当鼠标离开时隐藏 .gantt_tooltip
-      $(this.el).on('mouseleave', '.gantt_task_cell, .gantt_left_cell_item', debounce(function (event) {
+      // 鼠标离开时隐藏提示框,使用 debounce
+      $(this.el).on('mouseleave', '.gantt_task_cell, .gantt_left_cell_item', debounce(function () {
         const gantt_tooltip = $(_this.el).find('.gantt_tooltip');
         gantt_tooltip.hide();
-      }, 51));
+      }, 51)); // debounce 时间设置为51毫秒
     },
 
     renderChart: function () {
