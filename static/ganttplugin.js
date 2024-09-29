@@ -60,6 +60,16 @@ const GanttChart = function () {
       return dates;
     },
 
+    // 获取计算开始时间(开始时间 + 距离开始时间的偏移量)
+    CalculateStartTime: function (offset) {
+      const _this = this;
+      const gantt_start_time = new Date(this.task_start_end_data[0] + ' 00:00');
+      // 获取偏移的时间
+      const offset_time = offset / _this.task_cell_width * 24 * 60;// 得到分钟数
+      const start_time = new Date(gantt_start_time.getTime() + offset_time * 60 * 1000);
+      return CustomDateFtt(start_time, "yyyy-MM-dd hh:mm");
+    },
+
     // 清空视图
     clear: function () {
       $(this.el).html('');
@@ -411,8 +421,14 @@ const GanttChart = function () {
       this.scroll_area_thumb.addEventListener('scroll', debounce(this.handleScroll.bind(this, 'thumb'), 30, true));
     },
 
+    // 拖拽后更新视图
+    taskDrag_updateView: function (obj) {
+      // 
+    },
+
     // 任务的拖拽事件
     taskDragEvent: function () {
+      const _this = this;
       let offsetX;
 
       $(this.el).on('mousedown', '.gantt_task_cell', function (e) {
@@ -426,8 +442,18 @@ const GanttChart = function () {
 
         let $cell = $(this);
 
+
+
         // 设置鼠标移动和松开事件
         $(document).on('mousemove.drag', function (e) {
+          const leftNum = e.clientX - parentOffset.left - offsetX;// 左侧的偏移量
+          console.log(430, leftNum);
+          const leftIndex = Math.floor(leftNum / _this.task_cell_width); // 左侧的索引
+          console.log(432, leftIndex);
+
+          const new_start_time = _this.CalculateStartTime(leftNum);
+          console.log(`ganttplugin.js 450 [new_start_time]`, new_start_time);
+
           $cell.css({
             left: (e.clientX - parentOffset.left - offsetX) + 'px',
           });
@@ -465,7 +491,7 @@ const GanttChart = function () {
     },
 
     // 任务编辑
-    updateTask: function (obj) {
+    editUpdateTask: function (obj) {
       const _this = this;
       const index_1 = obj.index_1;
       const index_2 = obj.index_2;
@@ -509,8 +535,8 @@ const GanttChart = function () {
         $(gantt_tooltip).html(plane_html);
 
         // 初始偏移值
-        let panelX = event.pageX + 8; // 向右偏移8px
-        let panelY = event.pageY + 10; // 向下偏移10px
+        let panelX = event.pageX + 4; // 向右偏移
+        let panelY = event.pageY + 5; // 向下偏移
 
         // 获取父元素的边界矩形
         const parentOffset = $(_this.el).offset();

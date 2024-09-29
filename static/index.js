@@ -247,7 +247,7 @@ layui.use(['layer', 'form', 'laydate'], function () {
       }
       console.log(`index.js 202 [form.val('testForm')]`, form.val('testForm'));
 
-      Instance_ganttChart.updateTask({
+      Instance_ganttChart.editUpdateTask({
         index_1: index_1,
         index_2: index_2,
         start_time: $('#task_start_time').val(),

@@ -144,7 +144,7 @@ function calculateMinutes(startTime, endTime) {
 // const minutes = calculateMinutes(start, end);
 // console.log(`时间差为：${minutes} 分钟`);
 
-// 以分钟生成结束时间
+// 开始时间 + 持续时间，得到结束时间
 function getTaskEndTime(startTime, duration) {
   // 将开始时间字符串转换为 Date 对象
   const startDate = new Date(startTime);
