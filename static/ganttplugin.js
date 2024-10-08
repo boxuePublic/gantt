@@ -35,13 +35,11 @@ const GanttChart = function () {
 
     taskClickCallback: null, // 任务点击回调函数
 
-
-
     // taskResizeCallback: null, // 任务调整大小回调函数
     // taskDragCallback: null, // 任务拖拽回调函数
     // taskDeleteCallback: null, // 任务删除回调函数
 
-    floatingPanelContent: function () { return '' },// 悬浮面板返回函数
+    floatingPanelContent: function () { return '' },// 悬浮面板返回函数，由外部定义
 
     // 获取两个日期之间的数组
     getDatesBetween: function (startTime, endTime) {
@@ -441,8 +439,6 @@ const GanttChart = function () {
         offsetY = e.clientY - (parentOffset.top + $(this).position().top);
 
         let $cell = $(this);
-
-
 
         // 设置鼠标移动和松开事件
         $(document).on('mousemove.drag', function (e) {

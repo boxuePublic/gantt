@@ -197,7 +197,8 @@ layui.use(['layer', 'form', 'laydate'], function () {
         let html = '';
         html += '<div class="gantt-plane-line">';
         html += ' <span class="gantt-plane-title">工单名称：</span>';
-        html += ' <span class="gantt-plane-text">' + (lineObj.order_name || '') + '</span>';
+        // html += ' <span class="gantt-plane-text">' + (lineObj.order_name || '') + '</span>';
+        html += ' <span class="gantt-plane-text">' + (lineObj.order_name || '') + (lineObj.order_name || '') + (lineObj.order_name || '') + '</span>';
         html += '</div>';
 
         html += '<div class="gantt-plane-line">';
