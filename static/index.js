@@ -68,6 +68,12 @@ layui.use(['layer', 'form', 'laydate'], function () {
           width: 170,
         },
         {
+          title: '工序号',
+          field: 'processes_no',
+          align: 'left',
+          width: 120,
+        },
+        {
           title: '机器', field: '', align: 'left', width: 170, template: function (item1, item2) {
             return item1.machine.name
           }
@@ -78,11 +84,13 @@ layui.use(['layer', 'form', 'laydate'], function () {
           align: 'center',
           width: 120,
         },
-        {
-          title: '持续时间', field: 'rowkey_duration', align: 'center', width: 90, template: function (item1, item2) {
-            return minutesToHours(item1.duration) + 'h'
-          }
-        },
+
+        // {
+        //   title: '持续时间', field: 'rowkey_duration', align: 'center', width: 90, template: function (item1, item2) {
+        //     return minutesToHours(item1.duration) + 'h'
+        //   }
+        // },
+
         // {
         //   title: '操作',
         //   align: 'center',

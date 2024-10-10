@@ -396,12 +396,13 @@ function turnDataFn_merge(data = []) {
 
 
     const planStartTime = CustomDateFtt(item.maintenance.date + ' 00:00', "yyyy-MM-dd hh:mm");// 工序开始时间
-    // const planEndTime = getTaskEndTime(item.maintenance.date, item.dailyHours);// 工序结束时间
-    const planEndTime = getTaskEndTime(item.maintenance.date + ' 00:00', 24 * 60);// 工序结束时间
+    const planEndTime = getTaskEndTime(item.maintenance.date, item.dailyHours);// 工序结束时间
+    // const planEndTime = getTaskEndTime(item.maintenance.date + ' 00:00', 24 * 60);// 工序结束时间
 
     if (existingIndex !== -1) {
       arr[existingIndex].taskArr.push({
         "start_time": planStartTime,
+        "duration": item.dailyHours,
         "end_time": planEndTime
       });
     } else {
@@ -421,7 +422,7 @@ function turnDataFn_merge(data = []) {
           "model": item.machine.model,
         },
         "planStartTime": planStartTime,
-        "duration": item.maintenance.capacity,
+        "duration": item.dailyHours,
         "planEndTime": planEndTime,
         "taskArr": [
           {
