@@ -106,10 +106,10 @@ const GanttChart = function () {
             this.end_time
           );
         }
-        console.log(
-          `日期数组`,
-          this.task_start_end_data
-        );
+        // console.log(
+        //   `日期数组`,
+        //   this.task_start_end_data
+        // );
       }
     },
 

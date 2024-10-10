@@ -38,7 +38,7 @@ layui.use(['layer', 'form', 'laydate'], function () {
     let data = await res.json();
     console.log(data);
 
-    const flatArray = turnDataFn_tile(data.timeslots);
+    const flatArray = turnDataFn_merge(data.timeslots);
     console.log(flatArray);
     initGanttChart(flatArray);
   }

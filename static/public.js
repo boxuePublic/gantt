@@ -347,7 +347,6 @@ function turnDataFn_tile(data) {
   return data.map(item => {
     const planStartTime = CustomDateFtt(item.maintenance.date + ' 00:00', "yyyy-MM-dd hh:mm");// 工序开始时间
     console.log(349, planStartTime);
-
     // const planEndTime = getTaskEndTime(item.maintenance.date, item.dailyHours);// 工序结束时间
     const planEndTime = getTaskEndTime(item.maintenance.date + ' 00:00', 24 * 60);// 工序结束时间
 
@@ -377,6 +376,65 @@ function turnDataFn_tile(data) {
       "maintenanceTime": []
     }
   })
+}
+
+// 转换函数--合并
+function turnDataFn_merge(data = []) {
+  let arr = [];
+  if (!data.length) return [];
+  const len = data.length;
+  for (let i = 0; i < len; i++) {
+    const item = data[i];
+
+    const cur_orderNo = item.procedure.orderNo;
+    const cur_procedureNo = item.procedure.procedureNo;
+
+    const existingIndex = arr.findIndex(v =>
+      v.order_no === cur_orderNo &&
+      v.processes_no === cur_procedureNo
+    );
+
+
+    const planStartTime = CustomDateFtt(item.maintenance.date + ' 00:00', "yyyy-MM-dd hh:mm");// 工序开始时间
+    // const planEndTime = getTaskEndTime(item.maintenance.date, item.dailyHours);// 工序结束时间
+    const planEndTime = getTaskEndTime(item.maintenance.date + ' 00:00', 24 * 60);// 工序结束时间
+
+    if (existingIndex !== -1) {
+      arr[existingIndex].taskArr.push({
+        "start_time": planStartTime,
+        "end_time": planEndTime
+      });
+    } else {
+      arr.push({
+        "order_id": item.order.id,
+        "order_no": item.order.orderNo,
+        "order_name": item.order.name,
+        // "order_status": "PENDING",
+        "processes_id": item.procedure.id,
+        "processes_no": item.procedure.procedureNo,
+        "processes_name": item.procedure.name,
+        // "processes_status": "PROCESSING",
+        "machine": {
+          "id": item.machine.id,
+          "name": item.machine.name,
+          "machineNo": item.machine.machineNo,
+          "model": item.machine.model,
+        },
+        "planStartTime": planStartTime,
+        "duration": item.maintenance.capacity,
+        "planEndTime": planEndTime,
+        "taskArr": [
+          {
+            "start_time": planStartTime,
+            "end_time": planEndTime
+          }
+        ],
+        // 维护时间
+        "maintenanceTime": []
+      });
+    }
+  }
+  return arr;
 }
 
 /* 
