@@ -345,8 +345,11 @@ function traverse(link, arr, lineObj) {
 // 转换函数-平铺
 function turnDataFn_tile(data) {
   return data.map(item => {
-    const planStartTime = CustomDateFtt(item.maintenance.date, "yyyy-MM-dd hh:mm");// 工序开始时间
-    const planEndTime = getTaskEndTime(item.maintenance.date, item.maintenance.capacity);// 工序结束时间
+    const planStartTime = CustomDateFtt(item.maintenance.date + ' 00:00', "yyyy-MM-dd hh:mm");// 工序开始时间
+    console.log(349, planStartTime);
+
+    // const planEndTime = getTaskEndTime(item.maintenance.date, item.dailyHours);// 工序结束时间
+    const planEndTime = getTaskEndTime(item.maintenance.date + ' 00:00', 24 * 60);// 工序结束时间
 
     return {
       "order_id": item.order.id,
@@ -380,10 +383,11 @@ function turnDataFn_tile(data) {
 
 {
   "id": 1,
+  // 工序
   "procedure": {
     "id": 701,
-    "orderNo": "ORD-2024-007",
-    "machineNo": "03",
+    "orderNo": "ORD-2024-007",// 订单号
+    "machineNo": "03",// 机器编号
     "name": "管道加工",
     "duration": 210,
     "procedureNo": "10",
@@ -394,6 +398,7 @@ function turnDataFn_tile(data) {
     "planStartTime": null,
     "status": "PENDING"
   },
+  // 订单
   "order": {
     "id": 7,
     "name": "液压系统装配",
@@ -402,6 +407,7 @@ function turnDataFn_tile(data) {
     "startDate": null,
     "endDate": null
   },
+  // 机器
   "machine": {
     "id": 3,
     "name": "Machine 3",
@@ -410,19 +416,13 @@ function turnDataFn_tile(data) {
   },
   "maintenance": {
     "id": 361,
-    "machine": {
-      "id": 3,
-      "name": "Machine 3",
-      "machineNo": "03",
-      "model": "M3"
-    },
-    "date": "2024-10-11",
+    "date": "2024-10-11",// 开始时间
     "duration": 0,
     "capacity": 80,
     "status": "IDLE",
     "description": null
   },
-  "dailyHours": 10,
+  "dailyHours": 10,// 持续时间
   "date": null
 }
 */
