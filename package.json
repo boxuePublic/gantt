@@ -1,0 +1,24 @@
+{
+  "name": "gantt",
+  "version": "1.0.0",
+  "description": "甘特图",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boxuePublic/gantt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boxuePublic/gantt/issues"
+  },
+  "homepage": "https://github.com/boxuePublic/gantt#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "node-fetch": "2.6.1"
+  }
+}

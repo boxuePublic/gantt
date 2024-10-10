@@ -341,3 +341,88 @@ function traverse(link, arr, lineObj) {
     }
   }
 }
+
+// 转换函数-平铺
+function turnDataFn_tile(data) {
+  return data.map(item => {
+    const planStartTime = CustomDateFtt(item.maintenance.date, "yyyy-MM-dd hh:mm");// 工序开始时间
+    const planEndTime = getTaskEndTime(item.maintenance.date, item.maintenance.capacity);// 工序结束时间
+
+    return {
+      "order_id": item.order.id,
+      "order_name": item.order.name,
+      // "order_status": "PENDING",
+      "processes_id": item.procedure.id,
+      "processes_name": item.procedure.name,
+      // "processes_status": "PROCESSING",
+      "machine": {
+        "id": item.machine.id,
+        "name": item.machine.name,
+        "machineNo": item.machine.machineNo,
+        "model": item.machine.model,
+      },
+      "planStartTime": planStartTime,
+      "duration": item.maintenance.capacity,
+      "planEndTime": planEndTime,
+      "taskArr": [
+        {
+          "start_time": planStartTime,
+          "end_time": planEndTime
+        }
+      ],
+      // 维护时间
+      "maintenanceTime": []
+    }
+  })
+}
+
+/* 
+
+{
+  "id": 1,
+  "procedure": {
+    "id": 701,
+    "orderNo": "ORD-2024-007",
+    "machineNo": "03",
+    "name": "管道加工",
+    "duration": 210,
+    "procedureNo": "10",
+    "nextProcedureNo": [
+      "20"
+    ],
+    "startTime": null,
+    "planStartTime": null,
+    "status": "PENDING"
+  },
+  "order": {
+    "id": 7,
+    "name": "液压系统装配",
+    "orderNo": "ORD-2024-007",
+    "priority": 1,
+    "startDate": null,
+    "endDate": null
+  },
+  "machine": {
+    "id": 3,
+    "name": "Machine 3",
+    "machineNo": "03",
+    "model": "M3"
+  },
+  "maintenance": {
+    "id": 361,
+    "machine": {
+      "id": 3,
+      "name": "Machine 3",
+      "machineNo": "03",
+      "model": "M3"
+    },
+    "date": "2024-10-11",
+    "duration": 0,
+    "capacity": 80,
+    "status": "IDLE",
+    "description": null
+  },
+  "dailyHours": 10,
+  "date": null
+}
+*/

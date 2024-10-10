@@ -19,7 +19,6 @@
 
 左侧的行点击事件
 
-
 优化：
 
 悬浮的时候显示手型，鼠标按下的时候显示拖拽
@@ -32,3 +31,8 @@
 
 
 
+其它：
+
+https://visactor.io/vtable/demo/gantt/gantt-customLayout
+
+  /Users/guokun/mayun/vuegroup/025-vtableVite 继续完善vtable的gantt图表

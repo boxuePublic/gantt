@@ -20,16 +20,32 @@ layui.use(['layer', 'form', 'laydate'], function () {
     fullPanel: true
   });
 
-  async function queryData() {
-    let res = await fetch('./static/data.json');
-    let data = await res.json();
+  // 加入时间分片之前的版本
+  // async function queryData() {
+  //   let res = await fetch('./static/data.json');
+  //   let data = await res.json();
 
-    const flatArray = turnDataFn(data);
+  //   const flatArray = turnDataFn(data);
+  //   console.log(flatArray);
+  //   // initGanttChart([]);
+  //   initGanttChart(flatArray);
+  // }
+  // queryData();
+
+
+  async function queryData() {
+    let res = await fetch('http://192.168.100.102:8080/api/scheduling/solution/1');
+    let data = await res.json();
+    console.log(data);
+
+    const flatArray = turnDataFn_tile(data.timeslots);
     console.log(flatArray);
-    // initGanttChart([]);
     initGanttChart(flatArray);
   }
   queryData();
+
+
+
 
 
   // 渲染甘特图
