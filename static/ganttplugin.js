@@ -258,7 +258,7 @@ const GanttChart = function () {
 
       // 计算总宽度
       const totalWidth = daysDiff * this.task_cell_width;
-
+      console.log('time ', totalWidth, startTime, endTime);
       return totalWidth;
     },
 
@@ -541,7 +541,13 @@ const GanttChart = function () {
         const index_2 = Number($(this).attr('data-index_2'));
         const gantt_tooltip = $(_this.el).find('.gantt_tooltip');
         // console.log(334, _this.data[index_1], index_1);
-        let plane_html = _this.floatingPanelContent(_this.data[index_1] || {}, index_2);
+        // console.log($(this).attr);
+
+        // 获取当前类名
+        var currentElement = $(event.currentTarget);
+        var className = currentElement.attr('class');
+
+        let plane_html = _this.floatingPanelContent(_this.data[index_1] || {}, index_2, className);
         $(gantt_tooltip).html(plane_html);
 
         // 初始偏移值

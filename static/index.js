@@ -217,7 +217,7 @@ layui.use(['layer', 'form', 'laydate'], function () {
         });
       },
       // 悬浮面板内容
-      floatingPanelContent: function (lineObj, index_2) {
+      floatingPanelContent: function (lineObj, index_2, className) {
         const taskObj = lineObj.taskArr[index_2] || {}; // 获取当前task数据
         console.log(222, lineObj, taskObj);
         let html = '';
@@ -242,15 +242,17 @@ layui.use(['layer', 'form', 'laydate'], function () {
         html += ' <span class="gantt-plane-text">' + ((lineObj.machine || {}).name || '') + '</span>';
         html += '</div>';
 
-        html += '<div class="gantt-plane-line">';
-        html += ' <span class="gantt-plane-title">开始时间：</span>';
-        html += ' <span class="gantt-plane-text">' + (taskObj.start_time || '') + '</span>';
-        html += '</div>';
+        if (['gantt_task_cell'].includes(className)) {
+          html += '<div class="gantt-plane-line">';
+          html += ' <span class="gantt-plane-title">开始时间：</span>';
+          html += ' <span class="gantt-plane-text">' + (taskObj.start_time || '') + '</span>';
+          html += '</div>';
 
-        html += '<div class="gantt-plane-line">';
-        html += ' <span class="gantt-plane-title">持续时间：</span>';
-        html += ' <span class="gantt-plane-text">' + minutesToHours(taskObj.duration) + 'h' + '</span>';
-        html += '</div>';
+          html += '<div class="gantt-plane-line">';
+          html += ' <span class="gantt-plane-title">持续时间：</span>';
+          html += ' <span class="gantt-plane-text">' + minutesToHours(taskObj.duration) + 'h' + '</span>';
+          html += '</div>';
+        }
 
         return html
       }
