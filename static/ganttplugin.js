@@ -77,8 +77,8 @@ const GanttChart = function () {
     // 计算时间范围
     timeFrame: function () {
       console.log(this.data);
-      const len = this.data.length;
-      for (let i = 0; i < len; i++) {
+      const len_1 = this.data.length;
+      for (let i = 0; i < len_1; i++) {
         const item = this.data[i];
         if (i != 0) {
           if (new Date(item.planStartTime) < new Date(this.start_time)) {
@@ -91,12 +91,25 @@ const GanttChart = function () {
           this.start_time = item.planStartTime;
           this.end_time = item.planEndTime;
         }
+
+        const taskArr = item.taskArr || [];
+        const len_2 = taskArr.length;
+        for (let j = 0; j < len_2; j++) {
+          const taskObj = taskArr[j];
+
+          if (new Date(taskObj.start_time) < new Date(this.start_time)) {
+            this.start_time = taskObj.start_time;
+          }
+          if (new Date(taskObj.end_time) > new Date(this.end_time)) {
+            this.end_time = taskObj.end_time;
+          }
+        }
       }
 
       // 临时测试时间范围,可删
       // this.start_time = '2024-09-01 10:00';
       // this.end_time = '2024-10-30 13:00';
-      console.log(`['时间范围']`, this.start_time, this.end_time);
+      console.log(`['99时间范围']`, this.start_time, this.end_time);
 
       if (this.start_time && this.end_time) {
         const flag_time = new Date(this.start_time) <= new Date(this.end_time);
