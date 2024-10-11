@@ -525,9 +525,10 @@ const GanttChart = function () {
       // 鼠标移动时显示提示框,使用 debounce
       $(this.el).on('mousemove', '.gantt_task_cell, .gantt_left_cell_item', debounce(function (event) {
         const index_1 = Number($(this).attr('data-index_1'));
+        const index_2 = Number($(this).attr('data-index_2'));
         const gantt_tooltip = $(_this.el).find('.gantt_tooltip');
         // console.log(334, _this.data[index_1], index_1);
-        let plane_html = _this.floatingPanelContent(_this.data[index_1] || {});
+        let plane_html = _this.floatingPanelContent(_this.data[index_1] || {}, index_2);
         $(gantt_tooltip).html(plane_html);
 
         // 初始偏移值

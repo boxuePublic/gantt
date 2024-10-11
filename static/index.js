@@ -59,22 +59,22 @@ layui.use(['layer', 'form', 'laydate'], function () {
           title: '工单名称',
           field: 'order_name',
           align: 'left',
-          width: 170,
+          width: 120,
         },
         {
           title: '工序名称',
           field: 'processes_name',
           align: 'left',
-          width: 170,
+          width: 100,
         },
         {
           title: '工序号',
           field: 'processes_no',
           align: 'left',
-          width: 120,
+          width: 60,
         },
         {
-          title: '机器', field: '', align: 'left', width: 170, template: function (item1, item2) {
+          title: '机器', field: '', align: 'left', width: 100, template: function (item1, item2) {
             return item1.machine.name
           }
         },
@@ -217,7 +217,9 @@ layui.use(['layer', 'form', 'laydate'], function () {
         });
       },
       // 悬浮面板内容
-      floatingPanelContent: function (lineObj) {
+      floatingPanelContent: function (lineObj, index_2) {
+        const taskObj = lineObj.taskArr[index_2] || {}; // 获取当前task数据
+        console.log(222, lineObj, taskObj);
         let html = '';
         html += '<div class="gantt-plane-line">';
         html += ' <span class="gantt-plane-title">工单名称：</span>';
@@ -231,18 +233,23 @@ layui.use(['layer', 'form', 'laydate'], function () {
         html += '</div>';
 
         html += '<div class="gantt-plane-line">';
+        html += ' <span class="gantt-plane-title">工序号：</span>';
+        html += ' <span class="gantt-plane-text">' + (lineObj.processes_no || '') + '</span>';
+        html += '</div>';
+
+        html += '<div class="gantt-plane-line">';
         html += ' <span class="gantt-plane-title">执行机器：</span>';
         html += ' <span class="gantt-plane-text">' + ((lineObj.machine || {}).name || '') + '</span>';
         html += '</div>';
 
         html += '<div class="gantt-plane-line">';
         html += ' <span class="gantt-plane-title">开始时间：</span>';
-        html += ' <span class="gantt-plane-text">' + (lineObj.planStartTime || '') + '</span>';
+        html += ' <span class="gantt-plane-text">' + (taskObj.start_time || '') + '</span>';
         html += '</div>';
 
         html += '<div class="gantt-plane-line">';
         html += ' <span class="gantt-plane-title">持续时间：</span>';
-        html += ' <span class="gantt-plane-text">' + minutesToHours(lineObj.duration) + 'h' + '</span>';
+        html += ' <span class="gantt-plane-text">' + minutesToHours(taskObj.duration) + 'h' + '</span>';
         html += '</div>';
 
         return html

@@ -427,6 +427,7 @@ function turnDataFn_merge(data = []) {
         "taskArr": [
           {
             "start_time": planStartTime,
+            "duration": item.dailyHours,
             "end_time": planEndTime
           }
         ],
