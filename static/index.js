@@ -219,7 +219,6 @@ layui.use(['layer', 'form', 'laydate'], function () {
       // 悬浮面板内容
       floatingPanelContent: function (lineObj, index_2, className) {
         const taskObj = lineObj.taskArr[index_2] || {}; // 获取当前task数据
-        console.log(222, lineObj, taskObj);
         let html = '';
         html += '<div class="gantt-plane-line">';
         html += ' <span class="gantt-plane-title">工单名称：</span>';
@@ -257,7 +256,6 @@ layui.use(['layer', 'form', 'laydate'], function () {
         return html
       }
     });
-
 
     // 关闭编辑弹窗
     $(document).on('click', '.laymy-popup-back', function () {
