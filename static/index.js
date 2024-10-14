@@ -34,7 +34,7 @@ layui.use(['layer', 'form', 'laydate'], function () {
 
 
   async function queryData() {
-    let res = await fetch('http://192.168.100.102:8080/api/scheduling/solution/1');
+    let res = await fetch('http://192.168.100.102:8081/api/scheduling/solution/1');
     let data = await res.json();
     console.log(data);
 
@@ -247,9 +247,13 @@ layui.use(['layer', 'form', 'laydate'], function () {
           html += ' <span class="gantt-plane-text">' + (taskObj.start_time || '') + '</span>';
           html += '</div>';
 
+          // html += '<div class="gantt-plane-line">';
+          // html += ' <span class="gantt-plane-title">持续时间：</span>';
+          // html += ' <span class="gantt-plane-text">' + minutesToHours(taskObj.duration) + 'h' + '</span>';
+          // html += '</div>';
           html += '<div class="gantt-plane-line">';
           html += ' <span class="gantt-plane-title">持续时间：</span>';
-          html += ' <span class="gantt-plane-text">' + minutesToHours(taskObj.duration) + 'h' + '</span>';
+          html += ' <span class="gantt-plane-text">' + taskObj.duration + '分' + '</span>';
           html += '</div>';
         }
 
@@ -290,6 +294,21 @@ layui.use(['layer', 'form', 'laydate'], function () {
     });
   }
 
+  // 提交排产
+  $(document).on('click', '#submitScheduling', function () {
+    if ($(this).attr('data-disabled') === 'true') {
+      return false;
+    }
+    console.log('index.js 203', '提交排产');
+
+    // const data = Instance_ganttChart.getData();
+    // console.log(data);
+    // 发送请求
+    // $.post('/api/scheduling/solution', data, function (res) {
+    //   console.log(res);
+    //   layer.msg('排产成功');
+    // });
+  });
 
   /* 
   #ADD8E6 待开始 浅蓝色	

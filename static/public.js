@@ -396,7 +396,7 @@ function turnDataFn_merge(data = []) {
 
 
     const planStartTime = CustomDateFtt(item.maintenance.date + ' 00:00', "yyyy-MM-dd hh:mm");// 工序开始时间
-    const planEndTime = getTaskEndTime(item.maintenance.date + ' 00:00', item.dailyHours * 10);// 工序结束时间
+    const planEndTime = getTaskEndTime(item.maintenance.date + ' 00:00', item.dailyHours);// 工序结束时间
     // const planEndTime = getTaskEndTime(item.maintenance.date + ' 00:00', 24 * 60);// 工序结束时间
 
     if (existingIndex !== -1) {
