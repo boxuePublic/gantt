@@ -1,10 +1,10 @@
-var arr = [
+[
   {
     "id": 1,
     "name": "电子元件组装",
     "orderNumber": "ORD-2024-001",
     "priority": 2,
-    "status": "PENDING",// IDLE completed processing pending
+    "status": "PENDING",
     "startProcess": {
       "id": 101,
       "name": "元件准备",
