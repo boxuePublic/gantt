@@ -132,11 +132,6 @@ function calculateMinutes(startTime, endTime) {
 
   return minutesDifference;
 }
-// 使用示例
-// const start = '2024-10-10 10:10';
-// const end = '2024-10-10 12:30';
-// const minutes = calculateMinutes(start, end);
-// console.log(`时间差为：${minutes} 分钟`);
 
 // 开始时间 + 持续时间，得到结束时间
 function getTaskEndTime(startTime, duration) {

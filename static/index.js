@@ -20,31 +20,32 @@ layui.use(['layer', 'form', 'laydate'], function () {
     fullPanel: true
   });
 
-  // 加入时间分片之前的版本
-  // async function queryData() {
-  //   let res = await fetch('./static/data.json');
-  //   let data = await res.json();
-
-  //   const flatArray = turnDataFn(data);
-  //   console.log(flatArray);
-  //   // initGanttChart([]);
-  //   initGanttChart(flatArray);
-  // }
-  // queryData();
-
-
   async function queryData() {
-    let res = await fetch('http://192.168.100.102:8081/api/scheduling/solution/1');
-    let data = await res.json();
-    console.log(data);
+    $.ajax({
+      url: "http://192.168.100.102:8081/api/scheduling1/solution/1",
+      // type: "GET",
+      // data: { userName: "BNTang", userPwd: "654321" },
+      success: function (res) {
+        console.log(res);
+        const flatArray = turnDataFn_merge(res.timeslots);
+        // console.log(flatArray);
+        initGanttChart(flatArray);
+      },
+      error: function (xhr) {
+        console.log("请求失败，状态码：" + xhr.status);
 
-    const flatArray = turnDataFn_merge(data.timeslots);
-    console.log(flatArray);
-    initGanttChart(flatArray);
+        fetch('/data/a02.json').then(res => res.json()).then((res) => {
+          console.log(`index.js 65 [res]`, res);
+          const flatArray = turnDataFn_merge(res.timeslots);
+          // console.log(flatArray);
+          initGanttChart(flatArray);
+        }).catch(err => {
+          console.log(err)
+        })
+      },
+    });
   }
   queryData();
-
-
 
 
 
@@ -253,7 +254,7 @@ layui.use(['layer', 'form', 'laydate'], function () {
           // html += '</div>';
           html += '<div class="gantt-plane-line">';
           html += ' <span class="gantt-plane-title">持续时间：</span>';
-          html += ' <span class="gantt-plane-text">' + taskObj.duration + '分' + '</span>';
+          html += ' <span class="gantt-plane-text">' + calculateMinutes(taskObj.duration) + '</span>';
           html += '</div>';
         }
 
@@ -315,7 +316,7 @@ layui.use(['layer', 'form', 'laydate'], function () {
   #4CAF50 进行中 绿色
   #FFA500 已完成 橙色
   #76b6cd 现在任务的颜色
-  
+
   */
 
 })
