@@ -104,15 +104,15 @@ function minutesToHours(minutes) {
   const hours = Math.floor((minutes % (60 * 24)) / 60);
   const remainingMinutes = minutes % 60;
 
-  const str = '';
+  let str = '';
   if (days > 0) {
-    str += days + '天';
+    str += (days + '天');
   }
   if (hours > 0) {
-    str += hours + '时';
+    str += (hours + '时');
   }
   if (remainingMinutes > 0) {
-    str += remainingMinutes + '分';
+    str += (remainingMinutes + '分');
   }
 
   return str;

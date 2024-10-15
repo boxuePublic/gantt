@@ -254,7 +254,7 @@ layui.use(['layer', 'form', 'laydate'], function () {
           // html += '</div>';
           html += '<div class="gantt-plane-line">';
           html += ' <span class="gantt-plane-title">持续时间：</span>';
-          html += ' <span class="gantt-plane-text">' + calculateMinutes(taskObj.duration) + '</span>';
+          html += ' <span class="gantt-plane-text">' + minutesToHours(taskObj.duration) + '</span>';
           html += '</div>';
         }
 
