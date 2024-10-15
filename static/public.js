@@ -120,6 +120,7 @@ function minutesToHours(minutes) {
 
 // 计算时间段有多少分钟
 function calculateMinutes(startTime, endTime) {
+  console.log(startTime, endTime);
   // 将时间字符串转换为 Date 对象
   const startDate = new Date(startTime.replace(/-/g, '/'));
   const endDate = new Date(endTime.replace(/-/g, '/'));
