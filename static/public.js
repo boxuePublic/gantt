@@ -100,29 +100,23 @@ function minutesToHours(minutes) {
     return '';
   }
 
-  const hours = Math.floor(minutes / 60);
-  let remainingMinutes = minutes % 60;
-  remainingMinutes = Math.floor(remainingMinutes / 60 * 10) / 10;
-  return (hours + remainingMinutes).toFixed(1);
-}
-// 单元测试
-// const testCases = [
-//   { input: 33, expected: '0.5' },
-//   { input: 39, expected: '0.6' },
-//   { input: 36, expected: '0.6' },
-//   { input: 37, expected: '0.6' },
-//   { input: 60, expected: '1.0' },
-//   { input: 90, expected: '1.5' },
-//   { input: 120, expected: '2.0' },
-//   { input: 0, expected: '0.0' },
-//   { input: null, expected: '' },
-//   { input: undefined, expected: '' },
-// ];
+  const days = Math.floor(minutes / (60 * 24));
+  const hours = Math.floor((minutes % (60 * 24)) / 60);
+  const remainingMinutes = minutes % 60;
 
-// testCases.forEach((testCase, index) => {
-//   const result = minutesToHours(testCase.input);
-//   console.log(`Test case ${index + 1}:`, result === testCase.expected ? 'Passed' : `Failed. Expected ${testCase.expected}, got ${result}`);
-// });
+  const str = '';
+  if (days > 0) {
+    str += days + '天';
+  }
+  if (hours > 0) {
+    str += hours + '时';
+  }
+  if (remainingMinutes > 0) {
+    str += remainingMinutes + '分';
+  }
+
+  return str;
+}
 
 // 计算时间段有多少分钟
 function calculateMinutes(startTime, endTime) {
