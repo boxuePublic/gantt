@@ -35,6 +35,8 @@ const GanttChart = function () {
 
     taskClickCallback: null, // 任务点击回调函数
 
+    dragMiddleObj: {},// 用于拖拽中间的对象
+
     // taskResizeCallback: null, // 任务调整大小回调函数
     // taskDragCallback: null, // 任务拖拽回调函数
     // taskDeleteCallback: null, // 任务删除回调函数
@@ -258,7 +260,6 @@ const GanttChart = function () {
 
       // 计算总宽度
       const totalWidth = daysDiff * this.task_cell_width;
-      console.log('time ', totalWidth, startTime, endTime);
       return totalWidth;
     },
 
@@ -456,12 +457,14 @@ const GanttChart = function () {
         // 设置鼠标移动和松开事件
         $(document).on('mousemove.drag', function (e) {
           const leftNum = e.clientX - parentOffset.left - offsetX;// 左侧的偏移量
-          console.log(430, leftNum);
           const leftIndex = Math.floor(leftNum / _this.task_cell_width); // 左侧的索引
-          console.log(432, leftIndex);
 
           const new_start_time = _this.CalculateStartTime(leftNum);
-          console.log(`ganttplugin.js 450 [new_start_time]`, new_start_time);
+          console.log(`ganttplugin.js 450 [new_start_time]`, leftNum, leftIndex, new_start_time);
+
+          // 小于表格开始时间
+
+          // 大于表格结束时间
 
           $cell.css({
             left: (e.clientX - parentOffset.left - offsetX) + 'px',
@@ -583,6 +586,16 @@ const GanttChart = function () {
         const gantt_tooltip = $(_this.el).find('.gantt_tooltip');
         gantt_tooltip.hide();
       }, 51)); // debounce 时间设置为51毫秒
+    },
+
+    // 获取拖拽的数据信息
+    getDragData: function (obj) {
+      const _this = this;
+      // _this.dragMiddleObj
+      const index_1 = obj.index_1;
+      const index_2 = obj.index_2;
+
+
     },
 
     renderChart: function () {
