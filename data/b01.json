@@ -1,0 +1,53 @@
+{
+  "id": 40,
+  "boxue": "提交排产后的数据",
+  "procedure": {
+    "id": 101,
+    "orderNo": "ORD-2024-001",
+    "machineNo": "01",
+    "name": "元件准备",
+    "duration": 960,
+    "procedureNo": 10,
+    "nextProcedureNo": [
+      20
+    ],
+    "planStartDate": null,
+    "planEndDate": null,
+    "startTime": null,
+    "endTime": null,
+    "status": "PROCESSING"
+  },
+  "order": {
+    "id": 1,
+    "name": "电子元件组装",
+    "orderNo": "ORD-2024-001",
+    "priority": 2,
+    "startDate": null,
+    "endDate": null
+  },
+  "machine": {
+    "id": 1,
+    "name": "Machine 1",
+    "machineNo": "01",
+    "model": "M1"
+  },
+  "maintenance": {
+    "id": 10,
+    "machine": {
+      "id": 1,
+      "name": "Machine 1",
+      "machineNo": "01",
+      "model": "M1"
+    },
+    "date": "2024-10-25",
+    "capacity": 480,
+    "status": "IDLE",
+    "description": null,
+    "startTime": "09:00:00",
+    "endTime": "17:00:00",
+    "usageTime": 0
+  },
+  "dailyHours": 480,
+  "dateTime": "2024-10-27T17:00:00",
+  "manual": true
+}

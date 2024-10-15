@@ -300,37 +300,16 @@ layui.use(['layer', 'form', 'laydate'], function () {
     if ($(this).attr('data-disabled') === 'true') {
       return false;
     }
-    console.log('index.js 203', '提交排产');
-
-    // $.ajax({
-    //   url: "http://192.168.100.102:8081/api/scheduling/update ",
-    //   type: "POST",
-    //   contentType: 'application/json; charset=utf-8',
-    //   data: JSON.stringify({
-    //     orderNo: 'ORD-2024-007',
-    //     machineNo: '04',
-    //     procedureNo: 10,
-    //     date: '2024-09-23',
-    //   }),
-    //   success: function (res) {
-    //     console.log('提交排产', res);
-    //   },
-    //   error: function (xhr) {
-    //     console.log("请求失败，状态码：" + xhr.status);
-    //   },
-    // });
-
-
     $.ajax({
       url: "http://192.168.100.102:8081/api/scheduling/update ",
       type: "POST",
       contentType: 'application/json; charset=utf-8',
-      data: {
-        orderNo: 'ORD-2024-007',
-        machineNo: '04',
-        procedureNo: 10,
-        date: '2024-09-23',
-      },
+      data: JSON.stringify({
+        "orderNo": "ORD-2024-001",
+        "machineNo": "01",
+        "procedureNo": 10,
+        "date": "2024-10-25"
+      }),
       success: function (res) {
         console.log('提交排产', res);
         layer.msg('排产成功');
@@ -339,14 +318,6 @@ layui.use(['layer', 'form', 'laydate'], function () {
         console.log("请求失败，状态码：" + xhr.status);
       },
     });
-
-    // const data = Instance_ganttChart.getData();
-    // console.log(data);
-    // 发送请求
-    // $.post('/api/scheduling/solution', data, function (res) {
-    //   console.log(res);
-    //   
-    // });
   });
 
   /* 
