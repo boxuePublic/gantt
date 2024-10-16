@@ -1,6 +1,6 @@
 const GanttChart = function () {
   return {
-    data: [], // 渲染的数据
+    gantt_data: [], // 渲染的数据
     el: null, // 挂载的元素
     options: {},
     task_cell_width: 240, // 任务单元格宽度
@@ -78,10 +78,10 @@ const GanttChart = function () {
 
     // 计算时间范围
     timeFrame: function () {
-      console.log(this.data);
-      const len_1 = this.data.length;
+      console.log(this.gantt_data);
+      const len_1 = this.gantt_data.length;
       for (let i = 0; i < len_1; i++) {
-        const item = this.data[i];
+        const item = this.gantt_data[i];
         if (i != 0) {
           if (new Date(item.planStartTime) < new Date(this.start_time)) {
             this.start_time = item.planStartTime;
@@ -204,7 +204,7 @@ const GanttChart = function () {
       const len = this.task_start_end_data.length;
       this.right_content_width = task_cell_width * len;
       const right_content_width = this.right_content_width + 'px';
-      const right_content_height = row_height * this.data.length + 'px';
+      const right_content_height = row_height * this.gantt_data.length + 'px';
 
       // 给顶层元素设置 左侧区域的宽度
       const topHeaders = $(this.el).find('.gantt_layout_wrapper');
@@ -325,7 +325,7 @@ const GanttChart = function () {
     // 渲染行数据
     initLine: function () {
       const _this = this;
-      const data = this.data || [];
+      const gantt_data = this.gantt_data || [];
 
       const gantt_left_box = $(this.el).find('.gantt_left_box')[0];
       const gantt_right_box = $(this.el).find('.gantt_right_box')[0];
@@ -338,7 +338,7 @@ const GanttChart = function () {
       const special_dates = this.special_dates || [];
       const special_works = this.special_works || [];
 
-      data.forEach(function (item_1, index_1) {
+      gantt_data.forEach(function (item_1, index_1) {
         // 左侧渲染
         let html_left = '<div class="gantt_left_line" data-index_1=\'' + index_1 + '\'>';
         columns.forEach(function (item_2, index_2) {
@@ -462,9 +462,13 @@ const GanttChart = function () {
           const new_start_time = _this.CalculateStartTime(leftNum);
           console.log(`ganttplugin.js 450 [new_start_time]`, leftNum, leftIndex, new_start_time);
 
-          // 小于表格开始时间
+          // 不能小于表格开始时间
 
-          // 大于表格结束时间
+          // 不能大于表格结束时间
+
+          // 不能小于上一个节点的结束时间
+
+          // 不能大于下一个节点的开始时间
 
           $cell.css({
             left: (e.clientX - parentOffset.left - offsetX) + 'px',
@@ -488,7 +492,7 @@ const GanttChart = function () {
     // 更新行显示
     updateLine: function (index_1) {
       const _this = this;
-      const item_1 = _this.data[index_1];
+      const item_1 = _this.gantt_data[index_1];
 
       // 更新左侧列表显示
       let html_left = '';
@@ -508,13 +512,13 @@ const GanttChart = function () {
       const index_1 = obj.index_1;
       const index_2 = obj.index_2;
       // 任务编辑事件
-      _this.data[index_1].taskArr[index_2].start_time = obj.start_time;
-      _this.data[index_1].taskArr[index_2].end_time = obj.end_time;
+      _this.gantt_data[index_1].taskArr[index_2].start_time = obj.start_time;
+      _this.gantt_data[index_1].taskArr[index_2].end_time = obj.end_time;
       if (this.view_type === 'working') {// 工序视图
         // 更改行数据时间
-        _this.data[index_1].planStartTime = obj.start_time;
-        _this.data[index_1].planEndTime = obj.end_time;
-        _this.data[index_1].duration = calculateMinutes(obj.start_time, obj.end_time);
+        _this.gantt_data[index_1].planStartTime = obj.start_time;
+        _this.gantt_data[index_1].planEndTime = obj.end_time;
+        _this.gantt_data[index_1].duration = calculateMinutes(obj.start_time, obj.end_time);
         // 更新行视图
         _this.updateLine(index_1);
       } else if (this.view_type === 'machine') {
@@ -550,7 +554,7 @@ const GanttChart = function () {
         var currentElement = $(event.currentTarget);
         var className = currentElement.attr('class');
 
-        let plane_html = _this.floatingPanelContent(_this.data[index_1] || {}, index_2, className);
+        let plane_html = _this.floatingPanelContent(_this.gantt_data[index_1] || {}, index_2, className);
         $(gantt_tooltip).html(plane_html);
 
         // 初始偏移值

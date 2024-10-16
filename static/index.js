@@ -22,13 +22,13 @@ layui.use(['layer', 'form', 'laydate'], function () {
 
   async function queryData() {
     $.ajax({
-      url: "http://192.168.100.102:8081/api/scheduling1/solution/1",
+      url: "http://192.168.100.102:8081/api/scheduling/solution/1",
       // type: "GET",
       // data: { userName: "BNTang", userPwd: "654321" },
       success: function (res) {
         console.log(res);
         const flatArray = turnDataFn_merge(res.timeslots);
-        // console.log(flatArray);
+        console.log(flatArray);
         initGanttChart(flatArray);
       },
       error: function (xhr) {
@@ -37,7 +37,7 @@ layui.use(['layer', 'form', 'laydate'], function () {
         fetch('/data/a02.json').then(res => res.json()).then((res) => {
           console.log(`index.js 65 [res]`, res);
           const flatArray = turnDataFn_merge(res.timeslots);
-          // console.log(flatArray);
+          console.log(flatArray);
           initGanttChart(flatArray);
         }).catch(err => {
           console.log(err)
@@ -50,11 +50,11 @@ layui.use(['layer', 'form', 'laydate'], function () {
 
 
   // 渲染甘特图
-  function initGanttChart(data) {
+  function initGanttChart(gantt_data) {
     Instance_ganttChart.init({
       el: '#gantt_here',
       permission: 'edit',
-      data: data,
+      gantt_data: gantt_data,
       columns: [
         {
           title: '工单名称',
@@ -106,7 +106,7 @@ layui.use(['layer', 'form', 'laydate'], function () {
       taskClickCallback: function (curEl, insObj, updateTask) {
         const index_1 = Number($(curEl).attr('data-index_1'));
         const index_2 = Number($(curEl).attr('data-index_2'));
-        const lineObj = insObj.data[index_1] || {};// 获取当前行数据
+        const lineObj = insObj.gantt_data[index_1] || {};// 获取当前行数据
         const taskObj = lineObj[index_2] || {}; // 获取当前task数据
 
         $('#submitEdit').attr('data-index_1', index_1);
@@ -252,13 +252,14 @@ layui.use(['layer', 'form', 'laydate'], function () {
           // html += ' <span class="gantt-plane-title">持续时间：</span>';
           // html += ' <span class="gantt-plane-text">' + minutesToHours(taskObj.duration) + 'h' + '</span>';
           // html += '</div>';
+
           html += '<div class="gantt-plane-line">';
           html += ' <span class="gantt-plane-title">持续时间：</span>';
           html += ' <span class="gantt-plane-text">' + minutesToHours(taskObj.duration) + '</span>';
           html += '</div>';
         }
 
-        return html
+        return html;
       }
     });
 
@@ -271,7 +272,7 @@ layui.use(['layer', 'form', 'laydate'], function () {
     $(document).on('click', '#submitEdit', function () {
       const index_1 = Number($(this).attr('data-index_1'));
       const index_2 = Number($(this).attr('data-index_2'));
-      const lineObj = Instance_ganttChart.data[index_1] || {};// 获取当前行数据
+      const lineObj = Instance_ganttChart.gantt_data[index_1] || {};// 获取当前行数据
 
       if (new Date($('#task_start_time').val()) > new Date($('#task_end_time').val())) {
         layer.msg('开始时间不能大于结束时间');
@@ -327,5 +328,4 @@ layui.use(['layer', 'form', 'laydate'], function () {
   #76b6cd 现在任务的颜色
 
   */
-
 })
