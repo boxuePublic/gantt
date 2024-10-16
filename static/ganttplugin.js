@@ -260,7 +260,7 @@ const GanttChart = function () {
 
       // 计算总宽度
       const totalWidth = daysDiff * this.task_cell_width;
-      return totalWidth;
+      return totalWidth.toFixed(2);
     },
 
     // 左侧行内容html
@@ -459,19 +459,35 @@ const GanttChart = function () {
           const leftNum = e.clientX - parentOffset.left - offsetX;// 左侧的偏移量
           const leftIndex = Math.floor(leftNum / _this.task_cell_width); // 左侧的索引
 
-          const new_start_time = _this.CalculateStartTime(leftNum);
+          let new_start_time = _this.CalculateStartTime(leftNum);
           console.log(`ganttplugin.js 450 [new_start_time]`, leftNum, leftIndex, new_start_time);
 
+          let left_num = e.clientX - parentOffset.left - offsetX;
+
+          const list_len = _this.task_start_end_data.length;
+          // 最小开始时间
+          const min_start_time = _this.task_start_end_data[0] + ' 00:00:00';
+          // 最大结束时间
+          const max_end_time = _this.task_start_end_data[list_len - 1] + ' 23:59:59';
+
           // 不能小于表格开始时间
-
+          if (new Date(new_start_time + ':00') < new Date(min_start_time)) {
+            left_num = 0;
+            new_start_time = min_start_time;
+          }
           // 不能大于表格结束时间
-
+          if (new Date(new_start_time + ':00') > new Date(max_end_time)) {
+            const cur_width = e.target.style.width.replace('px', '');
+            left_num = _this.right_content_width - cur_width;
+            new_start_time = max_end_time;
+          }
           // 不能小于上一个节点的结束时间
 
           // 不能大于下一个节点的开始时间
 
+          console.log('486 left_num', left_num, new_start_time)
           $cell.css({
-            left: (e.clientX - parentOffset.left - offsetX) + 'px',
+            left: left_num + 'px',
           });
         });
 
@@ -480,7 +496,6 @@ const GanttChart = function () {
           $(document).off('mousemove.drag');
           $(document).off('mouseup.drag');
         });
-
         // 防止文本选择
         e.preventDefault();
       });

@@ -5,17 +5,15 @@
       "procedure": {
         "id": 701,
         "orderNo": "ORD-2024-007",
-        "machineNo": "04",
+        "machineNo": "01",
         "name": "管道加工",
         "duration": 480,
         "procedureNo": 10,
         "nextProcedureNo": [
           20
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-23T07:30:00",
-        "endTime": null,
+        "startTime": "2024-11-01T09:00:00",
+        "endTime": "2024-11-01T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -27,29 +25,29 @@
         "endDate": null
       },
       "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
+        "id": 1,
+        "name": "Machine 1",
+        "machineNo": "01",
+        "model": "M1"
       },
       "maintenance": {
-        "id": 43,
+        "id": 1,
         "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
+          "id": 1,
+          "name": "Machine 1",
+          "machineNo": "01",
+          "model": "M1"
         },
-        "date": "2024-10-16",
+        "date": "2024-10-17",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 520
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-17T06:20:00",
+      "dateTime": "2024-10-17T09:00:00",
       "manual": false
     },
     {
@@ -57,17 +55,15 @@
       "procedure": {
         "id": 702,
         "orderNo": "ORD-2024-007",
-        "machineNo": "01",
+        "machineNo": "02",
         "name": "阀门组装",
         "duration": 1000,
         "procedureNo": 20,
         "nextProcedureNo": [
           30
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-23T11:00:00",
-        "endTime": null,
+        "startTime": "2024-10-18T09:00:00",
+        "endTime": "2024-10-27T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -79,29 +75,29 @@
         "endDate": null
       },
       "machine": {
-        "id": 1,
-        "name": "Machine 1",
-        "machineNo": "01",
-        "model": "M1"
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
       },
       "maintenance": {
-        "id": 23,
+        "id": 31,
         "machine": {
           "id": 2,
           "name": "Machine 2",
           "machineNo": "02",
           "model": "M2"
         },
-        "date": "2024-10-24",
+        "date": "2024-10-19",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-24T17:00:00",
+      "dateTime": "2024-10-19T09:00:00",
       "manual": false
     },
     {
@@ -109,17 +105,15 @@
       "procedure": {
         "id": 702,
         "orderNo": "ORD-2024-007",
-        "machineNo": "01",
+        "machineNo": "02",
         "name": "阀门组装",
         "duration": 1000,
         "procedureNo": 20,
         "nextProcedureNo": [
           30
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-23T11:00:00",
-        "endTime": null,
+        "startTime": "2024-10-18T09:00:00",
+        "endTime": "2024-10-27T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -131,29 +125,29 @@
         "endDate": null
       },
       "machine": {
-        "id": 1,
-        "name": "Machine 1",
-        "machineNo": "01",
-        "model": "M1"
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
       },
       "maintenance": {
-        "id": 7,
+        "id": 32,
         "machine": {
-          "id": 1,
-          "name": "Machine 1",
-          "machineNo": "01",
-          "model": "M1"
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
         },
-        "date": "2024-10-22",
+        "date": "2024-10-20",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-22T17:00:00",
+      "dateTime": "2024-10-20T09:00:00",
       "manual": false
     },
     {
@@ -161,17 +155,15 @@
       "procedure": {
         "id": 702,
         "orderNo": "ORD-2024-007",
-        "machineNo": "01",
+        "machineNo": "02",
         "name": "阀门组装",
         "duration": 1000,
         "procedureNo": 20,
         "nextProcedureNo": [
           30
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-23T11:00:00",
-        "endTime": null,
+        "startTime": "2024-10-18T09:00:00",
+        "endTime": "2024-10-27T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -183,18 +175,18 @@
         "endDate": null
       },
       "machine": {
-        "id": 1,
-        "name": "Machine 1",
-        "machineNo": "01",
-        "model": "M1"
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
       },
       "maintenance": {
-        "id": 3,
+        "id": 30,
         "machine": {
-          "id": 1,
-          "name": "Machine 1",
-          "machineNo": "01",
-          "model": "M1"
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
         },
         "date": "2024-10-18",
         "capacity": 480,
@@ -202,10 +194,10 @@
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 40
       },
       "dailyHours": 40,
-      "dateTime": "2024-10-18T19:40:00",
+      "dateTime": "2024-10-18T09:00:00",
       "manual": false
     },
     {
@@ -213,17 +205,15 @@
       "procedure": {
         "id": 703,
         "orderNo": "ORD-2024-007",
-        "machineNo": "04",
+        "machineNo": "03",
         "name": "泵体安装",
         "duration": 960,
         "procedureNo": 30,
         "nextProcedureNo": [
           40
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-23T14:00:00",
-        "endTime": null,
+        "startTime": "2024-10-21T09:00:00",
+        "endTime": "2024-10-26T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -235,29 +225,29 @@
         "endDate": null
       },
       "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
+        "id": 3,
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
       },
       "maintenance": {
-        "id": 54,
+        "id": 62,
         "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
+          "id": 3,
+          "name": "Machine 3",
+          "machineNo": "03",
+          "model": "M3"
         },
-        "date": "2024-10-27",
+        "date": "2024-10-22",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-27T17:00:00",
+      "dateTime": "2024-10-22T09:00:00",
       "manual": false
     },
     {
@@ -265,17 +255,15 @@
       "procedure": {
         "id": 703,
         "orderNo": "ORD-2024-007",
-        "machineNo": "04",
+        "machineNo": "03",
         "name": "泵体安装",
         "duration": 960,
         "procedureNo": 30,
         "nextProcedureNo": [
           40
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-23T14:00:00",
-        "endTime": null,
+        "startTime": "2024-10-21T09:00:00",
+        "endTime": "2024-10-26T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -287,29 +275,29 @@
         "endDate": null
       },
       "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
+        "id": 3,
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
       },
       "maintenance": {
-        "id": 52,
+        "id": 61,
         "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
+          "id": 3,
+          "name": "Machine 3",
+          "machineNo": "03",
+          "model": "M3"
         },
-        "date": "2024-10-25",
+        "date": "2024-10-21",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-26T09:00:00",
+      "dateTime": "2024-10-21T09:00:00",
       "manual": false
     },
     {
@@ -324,10 +312,8 @@
         "nextProcedureNo": [
           50
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-24T08:00:00",
-        "endTime": null,
+        "startTime": "2024-11-06T09:00:00",
+        "endTime": "2024-11-06T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -345,23 +331,23 @@
         "model": "M4"
       },
       "maintenance": {
-        "id": 32,
+        "id": 94,
         "machine": {
-          "id": 3,
-          "name": "Machine 3",
-          "machineNo": "03",
-          "model": "M3"
+          "id": 4,
+          "name": "Machine 4",
+          "machineNo": "04",
+          "model": "M4"
         },
-        "date": "2024-10-19",
+        "date": "2024-10-26",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-19T17:00:00",
+      "dateTime": "2024-10-26T09:00:00",
       "manual": false
     },
     {
@@ -369,15 +355,13 @@
       "procedure": {
         "id": 705,
         "orderNo": "ORD-2024-007",
-        "machineNo": "01",
+        "machineNo": "05",
         "name": "压力测试",
         "duration": 800,
         "procedureNo": 50,
         "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-24T13:00:00",
-        "endTime": null,
+        "startTime": "2024-10-20T09:00:00",
+        "endTime": "2024-10-30T14:20:00",
         "status": "PENDING"
       },
       "order": {
@@ -389,29 +373,29 @@
         "endDate": null
       },
       "machine": {
-        "id": 1,
-        "name": "Machine 1",
-        "machineNo": "01",
-        "model": "M1"
+        "id": 5,
+        "name": "Machine 5",
+        "machineNo": "05",
+        "model": "M5"
       },
       "maintenance": {
-        "id": 24,
+        "id": 123,
         "machine": {
-          "id": 2,
-          "name": "Machine 2",
-          "machineNo": "02",
-          "model": "M2"
+          "id": 5,
+          "name": "Machine 5",
+          "machineNo": "05",
+          "model": "M5"
         },
-        "date": "2024-10-25",
+        "date": "2024-10-27",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-25T17:00:00",
+      "dateTime": "2024-10-27T09:00:00",
       "manual": false
     },
     {
@@ -419,15 +403,13 @@
       "procedure": {
         "id": 705,
         "orderNo": "ORD-2024-007",
-        "machineNo": "01",
+        "machineNo": "05",
         "name": "压力测试",
         "duration": 800,
         "procedureNo": 50,
         "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-24T13:00:00",
-        "endTime": null,
+        "startTime": "2024-10-20T09:00:00",
+        "endTime": "2024-10-30T14:20:00",
         "status": "PENDING"
       },
       "order": {
@@ -439,29 +421,29 @@
         "endDate": null
       },
       "machine": {
-        "id": 1,
-        "name": "Machine 1",
-        "machineNo": "01",
-        "model": "M1"
+        "id": 5,
+        "name": "Machine 5",
+        "machineNo": "05",
+        "model": "M5"
       },
       "maintenance": {
-        "id": 8,
+        "id": 126,
         "machine": {
-          "id": 1,
-          "name": "Machine 1",
-          "machineNo": "01",
-          "model": "M1"
+          "id": 5,
+          "name": "Machine 5",
+          "machineNo": "05",
+          "model": "M5"
         },
-        "date": "2024-10-23",
+        "date": "2024-10-30",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 320
       },
       "dailyHours": 320,
-      "dateTime": "2024-10-23T15:00:00",
+      "dateTime": "2024-10-30T09:00:00",
       "manual": false
     },
     {
@@ -469,275 +451,15 @@
       "procedure": {
         "id": 801,
         "orderNo": "ORD-2024-008",
-        "machineNo": "02",
-        "name": "故障诊断",
-        "duration": 600,
-        "procedureNo": 10,
-        "nextProcedureNo": [
-          20
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-24T08:00:00",
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 8,
-        "name": "工业机器人维修",
-        "orderNo": "ORD-2024-008",
-        "priority": 3,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 2,
-        "name": "Machine 2",
-        "machineNo": "02",
-        "model": "M2"
-      },
-      "maintenance": {
-        "id": 16,
-        "machine": {
-          "id": 2,
-          "name": "Machine 2",
-          "machineNo": "02",
-          "model": "M2"
-        },
-        "date": "2024-10-17",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-17T17:00:00",
-      "manual": false
-    },
-    {
-      "id": 11,
-      "procedure": {
-        "id": 801,
-        "orderNo": "ORD-2024-008",
-        "machineNo": "02",
-        "name": "故障诊断",
-        "duration": 600,
-        "procedureNo": 10,
-        "nextProcedureNo": [
-          20
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-24T08:00:00",
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 8,
-        "name": "工业机器人维修",
-        "orderNo": "ORD-2024-008",
-        "priority": 3,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 2,
-        "name": "Machine 2",
-        "machineNo": "02",
-        "model": "M2"
-      },
-      "maintenance": {
-        "id": 15,
-        "machine": {
-          "id": 2,
-          "name": "Machine 2",
-          "machineNo": "02",
-          "model": "M2"
-        },
-        "date": "2024-10-16",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 120,
-      "dateTime": "2024-10-16T11:00:00",
-      "manual": false
-    },
-    {
-      "id": 12,
-      "procedure": {
-        "id": 802,
-        "orderNo": "ORD-2024-008",
-        "machineNo": "04",
-        "name": "零件更换",
-        "duration": 480,
-        "procedureNo": 20,
-        "nextProcedureNo": [
-          30
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 8,
-        "name": "工业机器人维修",
-        "orderNo": "ORD-2024-008",
-        "priority": 3,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
-      },
-      "maintenance": {
-        "id": 44,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
-        },
-        "date": "2024-10-17",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-18T00:00:00",
-      "manual": false
-    },
-    {
-      "id": 13,
-      "procedure": {
-        "id": 803,
-        "orderNo": "ORD-2024-008",
-        "machineNo": "04",
-        "name": "系统校准",
-        "duration": 600,
-        "procedureNo": 30,
-        "nextProcedureNo": [
-          40
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 8,
-        "name": "工业机器人维修",
-        "orderNo": "ORD-2024-008",
-        "priority": 3,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
-      },
-      "maintenance": {
-        "id": 46,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
-        },
-        "date": "2024-10-19",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-19T17:00:00",
-      "manual": false
-    },
-    {
-      "id": 14,
-      "procedure": {
-        "id": 803,
-        "orderNo": "ORD-2024-008",
-        "machineNo": "04",
-        "name": "系统校准",
-        "duration": 600,
-        "procedureNo": 30,
-        "nextProcedureNo": [
-          40
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 8,
-        "name": "工业机器人维修",
-        "orderNo": "ORD-2024-008",
-        "priority": 3,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
-      },
-      "maintenance": {
-        "id": 45,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
-        },
-        "date": "2024-10-18",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 120,
-      "dateTime": "2024-10-18T11:00:00",
-      "manual": false
-    },
-    {
-      "id": 15,
-      "procedure": {
-        "id": 804,
-        "orderNo": "ORD-2024-008",
         "machineNo": "01",
-        "name": "功能测试",
+        "name": "故障诊断",
         "duration": 600,
-        "procedureNo": 40,
-        "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "procedureNo": 10,
+        "nextProcedureNo": [
+          20
+        ],
+        "startTime": "2024-10-18T09:00:00",
+        "endTime": "2024-11-06T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -755,12 +477,12 @@
         "model": "M1"
       },
       "maintenance": {
-        "id": 19,
+        "id": 4,
         "machine": {
-          "id": 2,
-          "name": "Machine 2",
-          "machineNo": "02",
-          "model": "M2"
+          "id": 1,
+          "name": "Machine 1",
+          "machineNo": "01",
+          "model": "M1"
         },
         "date": "2024-10-20",
         "capacity": 480,
@@ -768,26 +490,26 @@
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-20T17:00:00",
+      "dateTime": "2024-10-20T09:00:00",
       "manual": false
     },
     {
-      "id": 16,
+      "id": 11,
       "procedure": {
-        "id": 804,
+        "id": 801,
         "orderNo": "ORD-2024-008",
         "machineNo": "01",
-        "name": "功能测试",
+        "name": "故障诊断",
         "duration": 600,
-        "procedureNo": 40,
-        "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "procedureNo": 10,
+        "nextProcedureNo": [
+          20
+        ],
+        "startTime": "2024-10-18T09:00:00",
+        "endTime": "2024-11-06T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -805,306 +527,96 @@
         "model": "M1"
       },
       "maintenance": {
-        "id": 67,
-        "machine": {
-          "id": 5,
-          "name": "Machine 5",
-          "machineNo": "05",
-          "model": "M5"
-        },
-        "date": "2024-10-26",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 120,
-      "dateTime": "2024-10-27T03:00:00",
-      "manual": false
-    },
-    {
-      "id": 17,
-      "procedure": {
-        "id": 501,
-        "orderNo": "ORD-2024-005",
-        "machineNo": "04",
-        "name": "PCB设计",
-        "duration": 800,
-        "procedureNo": 10,
-        "nextProcedureNo": [
-          20
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-21T08:30:00",
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 5,
-        "name": "电路板制造",
-        "orderNo": "ORD-2024-005",
-        "priority": 1,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
-      },
-      "maintenance": {
-        "id": 49,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
-        },
-        "date": "2024-10-22",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-24T01:00:00",
-      "manual": false
-    },
-    {
-      "id": 18,
-      "procedure": {
-        "id": 501,
-        "orderNo": "ORD-2024-005",
-        "machineNo": "04",
-        "name": "PCB设计",
-        "duration": 800,
-        "procedureNo": 10,
-        "nextProcedureNo": [
-          20
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-21T08:30:00",
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 5,
-        "name": "电路板制造",
-        "orderNo": "ORD-2024-005",
-        "priority": 1,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
-      },
-      "maintenance": {
-        "id": 43,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
-        },
-        "date": "2024-10-16",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 320,
-      "dateTime": "2024-10-17T06:20:00",
-      "manual": false
-    },
-    {
-      "id": 19,
-      "procedure": {
-        "id": 502,
-        "orderNo": "ORD-2024-005",
-        "machineNo": "04",
-        "name": "电路蚀刻",
-        "duration": 480,
-        "procedureNo": 20,
-        "nextProcedureNo": [
-          30
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-21T12:30:00",
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 5,
-        "name": "电路板制造",
-        "orderNo": "ORD-2024-005",
-        "priority": 1,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
-      },
-      "maintenance": {
-        "id": 49,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
-        },
-        "date": "2024-10-22",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-24T09:00:00",
-      "manual": false
-    },
-    {
-      "id": 20,
-      "procedure": {
-        "id": 503,
-        "orderNo": "ORD-2024-005",
-        "machineNo": "04",
-        "name": "元件焊接",
-        "duration": 480,
-        "procedureNo": 30,
-        "nextProcedureNo": [
-          40
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-22T08:30:00",
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 5,
-        "name": "电路板制造",
-        "orderNo": "ORD-2024-005",
-        "priority": 1,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
-      },
-      "maintenance": {
-        "id": 6,
+        "id": 2,
         "machine": {
           "id": 1,
           "name": "Machine 1",
           "machineNo": "01",
           "model": "M1"
         },
+        "date": "2024-10-18",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 120
+      },
+      "dailyHours": 120,
+      "dateTime": "2024-10-18T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 12,
+      "procedure": {
+        "id": 802,
+        "orderNo": "ORD-2024-008",
+        "machineNo": "02",
+        "name": "零件更换",
+        "duration": 480,
+        "procedureNo": 20,
+        "nextProcedureNo": [
+          30
+        ],
+        "startTime": "2024-11-04T09:00:00",
+        "endTime": "2024-11-04T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 8,
+        "name": "工业机器人维修",
+        "orderNo": "ORD-2024-008",
+        "priority": 3,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
+      },
+      "maintenance": {
+        "id": 33,
+        "machine": {
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
+        },
         "date": "2024-10-21",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-22T01:00:00",
+      "dateTime": "2024-10-21T09:00:00",
       "manual": false
     },
     {
-      "id": 21,
+      "id": 13,
       "procedure": {
-        "id": 504,
-        "orderNo": "ORD-2024-005",
-        "machineNo": "04",
-        "name": "功能测试",
-        "duration": 480,
-        "procedureNo": 40,
-        "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-22T13:30:00",
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 5,
-        "name": "电路板制造",
-        "orderNo": "ORD-2024-005",
-        "priority": 1,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
-      },
-      "maintenance": {
-        "id": 55,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
-        },
-        "date": "2024-10-28",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-28T17:00:00",
-      "manual": false
-    },
-    {
-      "id": 22,
-      "procedure": {
-        "id": 601,
-        "orderNo": "ORD-2024-006",
+        "id": 803,
+        "orderNo": "ORD-2024-008",
         "machineNo": "03",
-        "name": "传感器校准",
-        "duration": 480,
-        "procedureNo": 10,
+        "name": "系统校准",
+        "duration": 600,
+        "procedureNo": 30,
         "nextProcedureNo": [
-          20
+          40
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-22T09:00:00",
-        "endTime": null,
+        "startTime": "2024-10-25T09:00:00",
+        "endTime": "2024-10-31T11:00:00",
         "status": "PENDING"
       },
       "order": {
-        "id": 6,
-        "name": "工业传感器组装",
-        "orderNo": "ORD-2024-006",
-        "priority": 2,
+        "id": 8,
+        "name": "工业机器人维修",
+        "orderNo": "ORD-2024-008",
+        "priority": 3,
         "startDate": null,
         "endDate": null
       },
@@ -1115,218 +627,12 @@
         "model": "M3"
       },
       "maintenance": {
-        "id": 30,
+        "id": 65,
         "machine": {
           "id": 3,
           "name": "Machine 3",
           "machineNo": "03",
           "model": "M3"
-        },
-        "date": "2024-10-17",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-17T17:00:00",
-      "manual": false
-    },
-    {
-      "id": 23,
-      "procedure": {
-        "id": 602,
-        "orderNo": "ORD-2024-006",
-        "machineNo": "03",
-        "name": "电路组装",
-        "duration": 960,
-        "procedureNo": 20,
-        "nextProcedureNo": [
-          30
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-22T12:00:00",
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 6,
-        "name": "工业传感器组装",
-        "orderNo": "ORD-2024-006",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 3,
-        "name": "Machine 3",
-        "machineNo": "03",
-        "model": "M3"
-      },
-      "maintenance": {
-        "id": 20,
-        "machine": {
-          "id": 2,
-          "name": "Machine 2",
-          "machineNo": "02",
-          "model": "M2"
-        },
-        "date": "2024-10-21",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-21T17:00:00",
-      "manual": false
-    },
-    {
-      "id": 24,
-      "procedure": {
-        "id": 602,
-        "orderNo": "ORD-2024-006",
-        "machineNo": "03",
-        "name": "电路组装",
-        "duration": 960,
-        "procedureNo": 20,
-        "nextProcedureNo": [
-          30
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-22T12:00:00",
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 6,
-        "name": "工业传感器组装",
-        "orderNo": "ORD-2024-006",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 3,
-        "name": "Machine 3",
-        "machineNo": "03",
-        "model": "M3"
-      },
-      "maintenance": {
-        "id": 44,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
-        },
-        "date": "2024-10-17",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-18T08:00:00",
-      "manual": false
-    },
-    {
-      "id": 25,
-      "procedure": {
-        "id": 603,
-        "orderNo": "ORD-2024-006",
-        "machineNo": "04",
-        "name": "外壳安装",
-        "duration": 480,
-        "procedureNo": 30,
-        "nextProcedureNo": [
-          40
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-23T08:00:00",
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 6,
-        "name": "工业传感器组装",
-        "orderNo": "ORD-2024-006",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
-      },
-      "maintenance": {
-        "id": 26,
-        "machine": {
-          "id": 2,
-          "name": "Machine 2",
-          "machineNo": "02",
-          "model": "M2"
-        },
-        "date": "2024-10-27",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-28T21:00:00",
-      "manual": false
-    },
-    {
-      "id": 26,
-      "procedure": {
-        "id": 604,
-        "orderNo": "ORD-2024-006",
-        "machineNo": "01",
-        "name": "功能测试",
-        "duration": 480,
-        "procedureNo": 40,
-        "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-23T10:00:00",
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 6,
-        "name": "工业传感器组装",
-        "orderNo": "ORD-2024-006",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 1,
-        "name": "Machine 1",
-        "machineNo": "01",
-        "model": "M1"
-      },
-      "maintenance": {
-        "id": 52,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
         },
         "date": "2024-10-25",
         "capacity": 480,
@@ -1334,359 +640,145 @@
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-26T09:00:00",
+      "dateTime": "2024-10-25T09:00:00",
       "manual": false
     },
     {
-      "id": 27,
+      "id": 14,
       "procedure": {
-        "id": 301,
-        "orderNo": "ORD-2024-003",
-        "machineNo": "01",
-        "name": "塑料制粒",
-        "duration": 480,
-        "procedureNo": 10,
+        "id": 803,
+        "orderNo": "ORD-2024-008",
+        "machineNo": "03",
+        "name": "系统校准",
+        "duration": 600,
+        "procedureNo": 30,
         "nextProcedureNo": [
-          20
+          40
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-25T09:00:00",
+        "endTime": "2024-10-31T11:00:00",
         "status": "PENDING"
       },
       "order": {
-        "id": 3,
-        "name": "塑料外壳生产",
-        "orderNo": "ORD-2024-003",
+        "id": 8,
+        "name": "工业机器人维修",
+        "orderNo": "ORD-2024-008",
         "priority": 3,
         "startDate": null,
         "endDate": null
       },
       "machine": {
-        "id": 1,
-        "name": "Machine 1",
-        "machineNo": "01",
-        "model": "M1"
-      },
-      "maintenance": {
-        "id": 43,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
-        },
-        "date": "2024-10-16",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-17T06:20:00",
-      "manual": false
-    },
-    {
-      "id": 28,
-      "procedure": {
-        "id": 302,
-        "orderNo": "ORD-2024-003",
-        "machineNo": "02",
-        "name": "注塑成型",
-        "duration": 900,
-        "procedureNo": 20,
-        "nextProcedureNo": [
-          30
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
         "id": 3,
-        "name": "塑料外壳生产",
-        "orderNo": "ORD-2024-003",
-        "priority": 3,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 2,
-        "name": "Machine 2",
-        "machineNo": "02",
-        "model": "M2"
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
       },
       "maintenance": {
-        "id": 31,
+        "id": 63,
         "machine": {
           "id": 3,
           "name": "Machine 3",
           "machineNo": "03",
           "model": "M3"
         },
-        "date": "2024-10-18",
+        "date": "2024-10-23",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 120
       },
-      "dailyHours": 480,
-      "dateTime": "2024-10-18T17:00:00",
+      "dailyHours": 120,
+      "dateTime": "2024-10-23T09:00:00",
       "manual": false
     },
     {
-      "id": 29,
+      "id": 15,
       "procedure": {
-        "id": 302,
-        "orderNo": "ORD-2024-003",
-        "machineNo": "02",
-        "name": "注塑成型",
-        "duration": 900,
-        "procedureNo": 20,
-        "nextProcedureNo": [
-          30
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "id": 804,
+        "orderNo": "ORD-2024-008",
+        "machineNo": "04",
+        "name": "功能测试",
+        "duration": 600,
+        "procedureNo": 40,
+        "nextProcedureNo": [],
+        "startTime": "2024-10-28T09:00:00",
+        "endTime": "2024-11-10T17:00:00",
         "status": "PENDING"
       },
       "order": {
-        "id": 3,
-        "name": "塑料外壳生产",
-        "orderNo": "ORD-2024-003",
+        "id": 8,
+        "name": "工业机器人维修",
+        "orderNo": "ORD-2024-008",
         "priority": 3,
         "startDate": null,
         "endDate": null
       },
       "machine": {
-        "id": 2,
-        "name": "Machine 2",
-        "machineNo": "02",
-        "model": "M2"
+        "id": 4,
+        "name": "Machine 4",
+        "machineNo": "04",
+        "model": "M4"
       },
       "maintenance": {
-        "id": 44,
+        "id": 98,
         "machine": {
           "id": 4,
           "name": "Machine 4",
           "machineNo": "04",
           "model": "M4"
         },
-        "date": "2024-10-17",
+        "date": "2024-10-30",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 420,
-      "dateTime": "2024-10-18T00:00:00",
-      "manual": false
-    },
-    {
-      "id": 30,
-      "procedure": {
-        "id": 303,
-        "orderNo": "ORD-2024-003",
-        "machineNo": "01",
-        "name": "冷却",
-        "duration": 600,
-        "procedureNo": 30,
-        "nextProcedureNo": [
-          40
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 3,
-        "name": "塑料外壳生产",
-        "orderNo": "ORD-2024-003",
-        "priority": 3,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 1,
-        "name": "Machine 1",
-        "machineNo": "01",
-        "model": "M1"
-      },
-      "maintenance": {
-        "id": 6,
-        "machine": {
-          "id": 1,
-          "name": "Machine 1",
-          "machineNo": "01",
-          "model": "M1"
-        },
-        "date": "2024-10-21",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-21T17:00:00",
+      "dateTime": "2024-10-30T09:00:00",
       "manual": false
     },
     {
-      "id": 31,
+      "id": 16,
       "procedure": {
-        "id": 303,
-        "orderNo": "ORD-2024-003",
-        "machineNo": "01",
-        "name": "冷却",
+        "id": 804,
+        "orderNo": "ORD-2024-008",
+        "machineNo": "04",
+        "name": "功能测试",
         "duration": 600,
-        "procedureNo": 30,
-        "nextProcedureNo": [
-          40
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 3,
-        "name": "塑料外壳生产",
-        "orderNo": "ORD-2024-003",
-        "priority": 3,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 1,
-        "name": "Machine 1",
-        "machineNo": "01",
-        "model": "M1"
-      },
-      "maintenance": {
-        "id": 3,
-        "machine": {
-          "id": 1,
-          "name": "Machine 1",
-          "machineNo": "01",
-          "model": "M1"
-        },
-        "date": "2024-10-18",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 120,
-      "dateTime": "2024-10-18T19:40:00",
-      "manual": false
-    },
-    {
-      "id": 32,
-      "procedure": {
-        "id": 304,
-        "orderNo": "ORD-2024-003",
-        "machineNo": "02",
-        "name": "修边",
-        "duration": 800,
         "procedureNo": 40,
         "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-28T09:00:00",
+        "endTime": "2024-11-10T17:00:00",
         "status": "PENDING"
       },
       "order": {
-        "id": 3,
-        "name": "塑料外壳生产",
-        "orderNo": "ORD-2024-003",
+        "id": 8,
+        "name": "工业机器人维修",
+        "orderNo": "ORD-2024-008",
         "priority": 3,
         "startDate": null,
         "endDate": null
       },
       "machine": {
-        "id": 2,
-        "name": "Machine 2",
-        "machineNo": "02",
-        "model": "M2"
+        "id": 4,
+        "name": "Machine 4",
+        "machineNo": "04",
+        "model": "M4"
       },
       "maintenance": {
-        "id": 26,
+        "id": 96,
         "machine": {
-          "id": 2,
-          "name": "Machine 2",
-          "machineNo": "02",
-          "model": "M2"
-        },
-        "date": "2024-10-27",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-28T21:00:00",
-      "manual": false
-    },
-    {
-      "id": 33,
-      "procedure": {
-        "id": 304,
-        "orderNo": "ORD-2024-003",
-        "machineNo": "02",
-        "name": "修边",
-        "duration": 800,
-        "procedureNo": 40,
-        "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 3,
-        "name": "塑料外壳生产",
-        "orderNo": "ORD-2024-003",
-        "priority": 3,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 2,
-        "name": "Machine 2",
-        "machineNo": "02",
-        "model": "M2"
-      },
-      "maintenance": {
-        "id": 13,
-        "machine": {
-          "id": 1,
-          "name": "Machine 1",
-          "machineNo": "01",
-          "model": "M1"
+          "id": 4,
+          "name": "Machine 4",
+          "machineNo": "04",
+          "model": "M4"
         },
         "date": "2024-10-28",
         "capacity": 480,
@@ -1694,191 +786,83 @@
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 600
       },
-      "dailyHours": 320,
-      "dateTime": "2024-10-29T13:20:00",
+      "dailyHours": 120,
+      "dateTime": "2024-10-28T09:00:00",
       "manual": false
     },
     {
-      "id": 34,
+      "id": 17,
       "procedure": {
-        "id": 401,
-        "orderNo": "ORD-2024-004",
-        "machineNo": "02",
-        "name": "材料裁剪",
-        "duration": 480,
+        "id": 501,
+        "orderNo": "ORD-2024-005",
+        "machineNo": "01",
+        "name": "PCB设计",
+        "duration": 800,
         "procedureNo": 10,
         "nextProcedureNo": [
           20
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-20T10:00:00",
-        "endTime": null,
+        "startTime": "2024-10-27T09:00:00",
+        "endTime": "2024-11-02T17:00:00",
         "status": "PENDING"
       },
       "order": {
-        "id": 4,
-        "name": "金属框架焊接",
-        "orderNo": "ORD-2024-004",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 2,
-        "name": "Machine 2",
-        "machineNo": "02",
-        "model": "M2"
-      },
-      "maintenance": {
-        "id": 21,
-        "machine": {
-          "id": 2,
-          "name": "Machine 2",
-          "machineNo": "02",
-          "model": "M2"
-        },
-        "date": "2024-10-22",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-22T17:00:00",
-      "manual": false
-    },
-    {
-      "id": 35,
-      "procedure": {
-        "id": 402,
-        "orderNo": "ORD-2024-004",
-        "machineNo": "05",
-        "name": "焊接",
-        "duration": 600,
-        "procedureNo": 20,
-        "nextProcedureNo": [
-          30
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-20T12:00:00",
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 4,
-        "name": "金属框架焊接",
-        "orderNo": "ORD-2024-004",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
         "id": 5,
-        "name": "Machine 5",
-        "machineNo": "05",
-        "model": "M5"
-      },
-      "maintenance": {
-        "id": 67,
-        "machine": {
-          "id": 5,
-          "name": "Machine 5",
-          "machineNo": "05",
-          "model": "M5"
-        },
-        "date": "2024-10-26",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-27T03:00:00",
-      "manual": false
-    },
-    {
-      "id": 36,
-      "procedure": {
-        "id": 402,
-        "orderNo": "ORD-2024-004",
-        "machineNo": "05",
-        "name": "焊接",
-        "duration": 600,
-        "procedureNo": 20,
-        "nextProcedureNo": [
-          30
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-20T12:00:00",
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 4,
-        "name": "金属框架焊接",
-        "orderNo": "ORD-2024-004",
-        "priority": 2,
+        "name": "电路板制造",
+        "orderNo": "ORD-2024-005",
+        "priority": 1,
         "startDate": null,
         "endDate": null
       },
       "machine": {
-        "id": 5,
-        "name": "Machine 5",
-        "machineNo": "05",
-        "model": "M5"
-      },
-      "maintenance": {
-        "id": 65,
-        "machine": {
-          "id": 5,
-          "name": "Machine 5",
-          "machineNo": "05",
-          "model": "M5"
-        },
-        "date": "2024-10-24",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 120,
-      "dateTime": "2024-10-24T11:00:00",
-      "manual": false
-    },
-    {
-      "id": 37,
-      "procedure": {
-        "id": 403,
-        "orderNo": "ORD-2024-004",
+        "id": 1,
+        "name": "Machine 1",
         "machineNo": "01",
-        "name": "打磨",
-        "duration": 900,
-        "procedureNo": 30,
+        "model": "M1"
+      },
+      "maintenance": {
+        "id": 17,
+        "machine": {
+          "id": 1,
+          "name": "Machine 1",
+          "machineNo": "01",
+          "model": "M1"
+        },
+        "date": "2024-11-02",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-02T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 18,
+      "procedure": {
+        "id": 501,
+        "orderNo": "ORD-2024-005",
+        "machineNo": "01",
+        "name": "PCB设计",
+        "duration": 800,
+        "procedureNo": 10,
         "nextProcedureNo": [
-          40
+          20
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-21T08:00:00",
-        "endTime": null,
+        "startTime": "2024-10-27T09:00:00",
+        "endTime": "2024-11-02T17:00:00",
         "status": "PENDING"
       },
       "order": {
-        "id": 4,
-        "name": "金属框架焊接",
-        "orderNo": "ORD-2024-004",
-        "priority": 2,
+        "id": 5,
+        "name": "电路板制造",
+        "orderNo": "ORD-2024-005",
+        "priority": 1,
         "startDate": null,
         "endDate": null
       },
@@ -1896,34 +880,774 @@
           "machineNo": "01",
           "model": "M1"
         },
+        "date": "2024-10-27",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 320
+      },
+      "dailyHours": 320,
+      "dateTime": "2024-10-27T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 19,
+      "procedure": {
+        "id": 502,
+        "orderNo": "ORD-2024-005",
+        "machineNo": "02",
+        "name": "电路蚀刻",
+        "duration": 480,
+        "procedureNo": 20,
+        "nextProcedureNo": [
+          30
+        ],
+        "startTime": "2024-10-20T09:00:00",
+        "endTime": "2024-10-20T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 5,
+        "name": "电路板制造",
+        "orderNo": "ORD-2024-005",
+        "priority": 1,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
+      },
+      "maintenance": {
+        "id": 46,
+        "machine": {
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
+        },
+        "date": "2024-11-03",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-03T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 20,
+      "procedure": {
+        "id": 503,
+        "orderNo": "ORD-2024-005",
+        "machineNo": "03",
+        "name": "元件焊接",
+        "duration": 480,
+        "procedureNo": 30,
+        "nextProcedureNo": [
+          40
+        ],
+        "startTime": "2024-11-03T09:00:00",
+        "endTime": "2024-11-03T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 5,
+        "name": "电路板制造",
+        "orderNo": "ORD-2024-005",
+        "priority": 1,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 3,
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
+      },
+      "maintenance": {
+        "id": 60,
+        "machine": {
+          "id": 3,
+          "name": "Machine 3",
+          "machineNo": "03",
+          "model": "M3"
+        },
+        "date": "2024-10-20",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 960
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-10-20T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 21,
+      "procedure": {
+        "id": 504,
+        "orderNo": "ORD-2024-005",
+        "machineNo": "04",
+        "name": "功能测试",
+        "duration": 480,
+        "procedureNo": 40,
+        "nextProcedureNo": [],
+        "startTime": "2024-11-03T09:00:00",
+        "endTime": "2024-11-03T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 5,
+        "name": "电路板制造",
+        "orderNo": "ORD-2024-005",
+        "priority": 1,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 4,
+        "name": "Machine 4",
+        "machineNo": "04",
+        "model": "M4"
+      },
+      "maintenance": {
+        "id": 89,
+        "machine": {
+          "id": 4,
+          "name": "Machine 4",
+          "machineNo": "04",
+          "model": "M4"
+        },
+        "date": "2024-10-21",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 960
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-10-21T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 22,
+      "procedure": {
+        "id": 601,
+        "orderNo": "ORD-2024-006",
+        "machineNo": "01",
+        "name": "传感器校准",
+        "duration": 480,
+        "procedureNo": 10,
+        "nextProcedureNo": [
+          20
+        ],
+        "startTime": "2024-10-31T09:00:00",
+        "endTime": "2024-10-31T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 6,
+        "name": "工业传感器组装",
+        "orderNo": "ORD-2024-006",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 1,
+        "name": "Machine 1",
+        "machineNo": "01",
+        "model": "M1"
+      },
+      "maintenance": {
+        "id": 3,
+        "machine": {
+          "id": 1,
+          "name": "Machine 1",
+          "machineNo": "01",
+          "model": "M1"
+        },
+        "date": "2024-10-19",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 960
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-10-19T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 23,
+      "procedure": {
+        "id": 602,
+        "orderNo": "ORD-2024-006",
+        "machineNo": "02",
+        "name": "电路组装",
+        "duration": 960,
+        "procedureNo": 20,
+        "nextProcedureNo": [
+          30
+        ],
+        "startTime": "2024-10-23T09:00:00",
+        "endTime": "2024-10-25T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 6,
+        "name": "工业传感器组装",
+        "orderNo": "ORD-2024-006",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
+      },
+      "maintenance": {
+        "id": 35,
+        "machine": {
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
+        },
+        "date": "2024-10-23",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-10-23T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 24,
+      "procedure": {
+        "id": 602,
+        "orderNo": "ORD-2024-006",
+        "machineNo": "02",
+        "name": "电路组装",
+        "duration": 960,
+        "procedureNo": 20,
+        "nextProcedureNo": [
+          30
+        ],
+        "startTime": "2024-10-23T09:00:00",
+        "endTime": "2024-10-25T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 6,
+        "name": "工业传感器组装",
+        "orderNo": "ORD-2024-006",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
+      },
+      "maintenance": {
+        "id": 37,
+        "machine": {
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
+        },
+        "date": "2024-10-25",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 960
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-10-25T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 25,
+      "procedure": {
+        "id": 603,
+        "orderNo": "ORD-2024-006",
+        "machineNo": "03",
+        "name": "外壳安装",
+        "duration": 480,
+        "procedureNo": 30,
+        "nextProcedureNo": [
+          40
+        ],
+        "startTime": "2024-11-10T09:00:00",
+        "endTime": "2024-11-10T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 6,
+        "name": "工业传感器组装",
+        "orderNo": "ORD-2024-006",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 3,
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
+      },
+      "maintenance": {
+        "id": 67,
+        "machine": {
+          "id": 3,
+          "name": "Machine 3",
+          "machineNo": "03",
+          "model": "M3"
+        },
+        "date": "2024-10-27",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-10-27T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 26,
+      "procedure": {
+        "id": 604,
+        "orderNo": "ORD-2024-006",
+        "machineNo": "04",
+        "name": "功能测试",
+        "duration": 480,
+        "procedureNo": 40,
+        "nextProcedureNo": [],
+        "startTime": "2024-11-10T09:00:00",
+        "endTime": "2024-11-10T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 6,
+        "name": "工业传感器组装",
+        "orderNo": "ORD-2024-006",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 4,
+        "name": "Machine 4",
+        "machineNo": "04",
+        "model": "M4"
+      },
+      "maintenance": {
+        "id": 97,
+        "machine": {
+          "id": 4,
+          "name": "Machine 4",
+          "machineNo": "04",
+          "model": "M4"
+        },
+        "date": "2024-10-29",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 960
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-10-29T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 27,
+      "procedure": {
+        "id": 301,
+        "orderNo": "ORD-2024-003",
+        "machineNo": "01",
+        "name": "塑料制粒",
+        "duration": 480,
+        "procedureNo": 10,
+        "nextProcedureNo": [
+          20
+        ],
+        "startTime": "2024-11-03T09:00:00",
+        "endTime": "2024-11-03T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 3,
+        "name": "塑料外壳生产",
+        "orderNo": "ORD-2024-003",
+        "priority": 3,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 1,
+        "name": "Machine 1",
+        "machineNo": "01",
+        "model": "M1"
+      },
+      "maintenance": {
+        "id": 6,
+        "machine": {
+          "id": 1,
+          "name": "Machine 1",
+          "machineNo": "01",
+          "model": "M1"
+        },
+        "date": "2024-10-22",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-10-22T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 28,
+      "procedure": {
+        "id": 302,
+        "orderNo": "ORD-2024-003",
+        "machineNo": "02",
+        "name": "注塑成型",
+        "duration": 900,
+        "procedureNo": 20,
+        "nextProcedureNo": [
+          30
+        ],
+        "startTime": "2024-10-22T09:00:00",
+        "endTime": "2024-10-24T16:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 3,
+        "name": "塑料外壳生产",
+        "orderNo": "ORD-2024-003",
+        "priority": 3,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
+      },
+      "maintenance": {
+        "id": 38,
+        "machine": {
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
+        },
         "date": "2024-10-26",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-26T17:00:00",
+      "dateTime": "2024-10-26T09:00:00",
       "manual": false
     },
     {
-      "id": 38,
+      "id": 29,
       "procedure": {
-        "id": 403,
-        "orderNo": "ORD-2024-004",
-        "machineNo": "01",
-        "name": "打磨",
+        "id": 302,
+        "orderNo": "ORD-2024-003",
+        "machineNo": "02",
+        "name": "注塑成型",
         "duration": 900,
+        "procedureNo": 20,
+        "nextProcedureNo": [
+          30
+        ],
+        "startTime": "2024-10-22T09:00:00",
+        "endTime": "2024-10-24T16:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 3,
+        "name": "塑料外壳生产",
+        "orderNo": "ORD-2024-003",
+        "priority": 3,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
+      },
+      "maintenance": {
+        "id": 36,
+        "machine": {
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
+        },
+        "date": "2024-10-24",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 420
+      },
+      "dailyHours": 420,
+      "dateTime": "2024-10-24T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 30,
+      "procedure": {
+        "id": 303,
+        "orderNo": "ORD-2024-003",
+        "machineNo": "03",
+        "name": "冷却",
+        "duration": 600,
         "procedureNo": 30,
         "nextProcedureNo": [
           40
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-21T08:00:00",
-        "endTime": null,
+        "startTime": "2024-11-02T09:00:00",
+        "endTime": "2024-11-02T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 3,
+        "name": "塑料外壳生产",
+        "orderNo": "ORD-2024-003",
+        "priority": 3,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 3,
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
+      },
+      "maintenance": {
+        "id": 74,
+        "machine": {
+          "id": 3,
+          "name": "Machine 3",
+          "machineNo": "03",
+          "model": "M3"
+        },
+        "date": "2024-11-03",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 120
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-03T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 31,
+      "procedure": {
+        "id": 303,
+        "orderNo": "ORD-2024-003",
+        "machineNo": "03",
+        "name": "冷却",
+        "duration": 600,
+        "procedureNo": 30,
+        "nextProcedureNo": [
+          40
+        ],
+        "startTime": "2024-11-02T09:00:00",
+        "endTime": "2024-11-02T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 3,
+        "name": "塑料外壳生产",
+        "orderNo": "ORD-2024-003",
+        "priority": 3,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 3,
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
+      },
+      "maintenance": {
+        "id": 73,
+        "machine": {
+          "id": 3,
+          "name": "Machine 3",
+          "machineNo": "03",
+          "model": "M3"
+        },
+        "date": "2024-11-02",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 120,
+      "dateTime": "2024-11-02T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 32,
+      "procedure": {
+        "id": 304,
+        "orderNo": "ORD-2024-003",
+        "machineNo": "04",
+        "name": "修边",
+        "duration": 800,
+        "procedureNo": 40,
+        "nextProcedureNo": [],
+        "startTime": "2024-11-06T09:00:00",
+        "endTime": "2024-11-11T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 3,
+        "name": "塑料外壳生产",
+        "orderNo": "ORD-2024-003",
+        "priority": 3,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 4,
+        "name": "Machine 4",
+        "machineNo": "04",
+        "model": "M4"
+      },
+      "maintenance": {
+        "id": 110,
+        "machine": {
+          "id": 4,
+          "name": "Machine 4",
+          "machineNo": "04",
+          "model": "M4"
+        },
+        "date": "2024-11-11",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-11T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 33,
+      "procedure": {
+        "id": 304,
+        "orderNo": "ORD-2024-003",
+        "machineNo": "04",
+        "name": "修边",
+        "duration": 800,
+        "procedureNo": 40,
+        "nextProcedureNo": [],
+        "startTime": "2024-11-06T09:00:00",
+        "endTime": "2024-11-11T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 3,
+        "name": "塑料外壳生产",
+        "orderNo": "ORD-2024-003",
+        "priority": 3,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 4,
+        "name": "Machine 4",
+        "machineNo": "04",
+        "model": "M4"
+      },
+      "maintenance": {
+        "id": 106,
+        "machine": {
+          "id": 4,
+          "name": "Machine 4",
+          "machineNo": "04",
+          "model": "M4"
+        },
+        "date": "2024-11-07",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 320
+      },
+      "dailyHours": 320,
+      "dateTime": "2024-11-07T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 34,
+      "procedure": {
+        "id": 401,
+        "orderNo": "ORD-2024-004",
+        "machineNo": "01",
+        "name": "材料裁剪",
+        "duration": 480,
+        "procedureNo": 10,
+        "nextProcedureNo": [
+          20
+        ],
+        "startTime": "2024-10-26T09:00:00",
+        "endTime": "2024-10-26T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -1941,23 +1665,223 @@
         "model": "M1"
       },
       "maintenance": {
-        "id": 13,
+        "id": 14,
         "machine": {
           "id": 1,
           "name": "Machine 1",
           "machineNo": "01",
           "model": "M1"
         },
-        "date": "2024-10-28",
+        "date": "2024-10-30",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 960
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-10-30T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 35,
+      "procedure": {
+        "id": 402,
+        "orderNo": "ORD-2024-004",
+        "machineNo": "02",
+        "name": "焊接",
+        "duration": 600,
+        "procedureNo": 20,
+        "nextProcedureNo": [
+          30
+        ],
+        "startTime": "2024-10-27T09:00:00",
+        "endTime": "2024-11-05T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 4,
+        "name": "金属框架焊接",
+        "orderNo": "ORD-2024-004",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
+      },
+      "maintenance": {
+        "id": 48,
+        "machine": {
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
+        },
+        "date": "2024-11-05",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-05T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 36,
+      "procedure": {
+        "id": 402,
+        "orderNo": "ORD-2024-004",
+        "machineNo": "02",
+        "name": "焊接",
+        "duration": 600,
+        "procedureNo": 20,
+        "nextProcedureNo": [
+          30
+        ],
+        "startTime": "2024-10-27T09:00:00",
+        "endTime": "2024-11-05T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 4,
+        "name": "金属框架焊接",
+        "orderNo": "ORD-2024-004",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
+      },
+      "maintenance": {
+        "id": 45,
+        "machine": {
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
+        },
+        "date": "2024-11-02",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 120
+      },
+      "dailyHours": 120,
+      "dateTime": "2024-11-02T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 37,
+      "procedure": {
+        "id": 403,
+        "orderNo": "ORD-2024-004",
+        "machineNo": "03",
+        "name": "打磨",
+        "duration": 900,
+        "procedureNo": 30,
+        "nextProcedureNo": [
+          40
+        ],
+        "startTime": "2024-11-06T09:00:00",
+        "endTime": "2024-11-08T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 4,
+        "name": "金属框架焊接",
+        "orderNo": "ORD-2024-004",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 3,
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
+      },
+      "maintenance": {
+        "id": 79,
+        "machine": {
+          "id": 3,
+          "name": "Machine 3",
+          "machineNo": "03",
+          "model": "M3"
+        },
+        "date": "2024-11-08",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-08T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 38,
+      "procedure": {
+        "id": 403,
+        "orderNo": "ORD-2024-004",
+        "machineNo": "03",
+        "name": "打磨",
+        "duration": 900,
+        "procedureNo": 30,
+        "nextProcedureNo": [
+          40
+        ],
+        "startTime": "2024-11-06T09:00:00",
+        "endTime": "2024-11-08T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 4,
+        "name": "金属框架焊接",
+        "orderNo": "ORD-2024-004",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 3,
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
+      },
+      "maintenance": {
+        "id": 77,
+        "machine": {
+          "id": 3,
+          "name": "Machine 3",
+          "machineNo": "03",
+          "model": "M3"
+        },
+        "date": "2024-11-06",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 420
       },
       "dailyHours": 420,
-      "dateTime": "2024-10-29T08:00:00",
+      "dateTime": "2024-11-06T09:00:00",
       "manual": false
     },
     {
@@ -1965,21 +1889,119 @@
       "procedure": {
         "id": 404,
         "orderNo": "ORD-2024-004",
-        "machineNo": "01",
+        "machineNo": "04",
         "name": "喷漆",
         "duration": 480,
         "procedureNo": 40,
         "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": "2024-09-21T11:00:00",
-        "endTime": null,
+        "startTime": "2024-11-08T17:00:00",
+        "endTime": "2024-11-09T01:00:00",
         "status": "PENDING"
       },
       "order": {
         "id": 4,
         "name": "金属框架焊接",
         "orderNo": "ORD-2024-004",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 4,
+        "name": "Machine 4",
+        "machineNo": "04",
+        "model": "M4"
+      },
+      "maintenance": {
+        "id": 108,
+        "machine": {
+          "id": 4,
+          "name": "Machine 4",
+          "machineNo": "04",
+          "model": "M4"
+        },
+        "date": "2024-11-09",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-09T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 40,
+      "procedure": {
+        "id": 101,
+        "orderNo": "ORD-2024-001",
+        "machineNo": "01",
+        "name": "元件准备",
+        "duration": 960,
+        "procedureNo": 10,
+        "nextProcedureNo": [
+          20
+        ],
+        "startTime": "2024-10-21T17:00:00",
+        "endTime": "2024-10-23T17:00:00",
+        "status": "PROCESSING"
+      },
+      "order": {
+        "id": 1,
+        "name": "电子元件组装",
+        "orderNo": "ORD-2024-001",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 1,
+        "name": "Machine 1",
+        "machineNo": "01",
+        "model": "M1"
+      },
+      "maintenance": {
+        "id": 7,
+        "machine": {
+          "id": 1,
+          "name": "Machine 1",
+          "machineNo": "01",
+          "model": "M1"
+        },
+        "date": "2024-10-23",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-10-23T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 41,
+      "procedure": {
+        "id": 101,
+        "orderNo": "ORD-2024-001",
+        "machineNo": "01",
+        "name": "元件准备",
+        "duration": 960,
+        "procedureNo": 10,
+        "nextProcedureNo": [
+          20
+        ],
+        "startTime": "2024-10-21T17:00:00",
+        "endTime": "2024-10-23T17:00:00",
+        "status": "PROCESSING"
+      },
+      "order": {
+        "id": 1,
+        "name": "电子元件组装",
+        "orderNo": "ORD-2024-001",
         "priority": 2,
         "startDate": null,
         "endDate": null
@@ -1998,120 +2020,16 @@
           "machineNo": "01",
           "model": "M1"
         },
-        "date": "2024-10-25",
+        "date": "2024-10-26",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 960
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-26T01:00:00",
-      "manual": false
-    },
-    {
-      "id": 40,
-      "procedure": {
-        "id": 101,
-        "orderNo": "ORD-2024-001",
-        "machineNo": "03",
-        "name": "元件准备",
-        "duration": 960,
-        "procedureNo": 10,
-        "nextProcedureNo": [
-          20
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PROCESSING"
-      },
-      "order": {
-        "id": 1,
-        "name": "电子元件组装",
-        "orderNo": "ORD-2024-001",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 3,
-        "name": "Machine 3",
-        "machineNo": "03",
-        "model": "M3"
-      },
-      "maintenance": {
-        "id": 29,
-        "machine": {
-          "id": 3,
-          "name": "Machine 3",
-          "machineNo": "03",
-          "model": "M3"
-        },
-        "date": "2024-10-16",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-16T17:00:00",
-      "manual": false
-    },
-    {
-      "id": 41,
-      "procedure": {
-        "id": 101,
-        "orderNo": "ORD-2024-001",
-        "machineNo": "03",
-        "name": "元件准备",
-        "duration": 960,
-        "procedureNo": 10,
-        "nextProcedureNo": [
-          20
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PROCESSING"
-      },
-      "order": {
-        "id": 1,
-        "name": "电子元件组装",
-        "orderNo": "ORD-2024-001",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 3,
-        "name": "Machine 3",
-        "machineNo": "03",
-        "model": "M3"
-      },
-      "maintenance": {
-        "id": 34,
-        "machine": {
-          "id": 3,
-          "name": "Machine 3",
-          "machineNo": "03",
-          "model": "M3"
-        },
-        "date": "2024-10-21",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-21T17:00:00",
+      "dateTime": "2024-10-26T09:00:00",
       "manual": false
     },
     {
@@ -2119,17 +2037,15 @@
       "procedure": {
         "id": 102,
         "orderNo": "ORD-2024-001",
-        "machineNo": "03",
+        "machineNo": "02",
         "name": "PCB焊接",
         "duration": 1000,
         "procedureNo": 20,
         "nextProcedureNo": [
           30
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-28T09:00:00",
+        "endTime": "2024-11-04T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -2141,29 +2057,29 @@
         "endDate": null
       },
       "machine": {
-        "id": 3,
-        "name": "Machine 3",
-        "machineNo": "03",
-        "model": "M3"
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
       },
       "maintenance": {
-        "id": 37,
+        "id": 40,
         "machine": {
-          "id": 3,
-          "name": "Machine 3",
-          "machineNo": "03",
-          "model": "M3"
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
         },
-        "date": "2024-10-24",
+        "date": "2024-10-28",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-25T11:00:00",
+      "dateTime": "2024-10-28T09:00:00",
       "manual": false
     },
     {
@@ -2171,121 +2087,15 @@
       "procedure": {
         "id": 102,
         "orderNo": "ORD-2024-001",
-        "machineNo": "03",
+        "machineNo": "02",
         "name": "PCB焊接",
         "duration": 1000,
         "procedureNo": 20,
         "nextProcedureNo": [
           30
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 1,
-        "name": "电子元件组装",
-        "orderNo": "ORD-2024-001",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 3,
-        "name": "Machine 3",
-        "machineNo": "03",
-        "model": "M3"
-      },
-      "maintenance": {
-        "id": 49,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
-        },
-        "date": "2024-10-22",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-24T01:00:00",
-      "manual": false
-    },
-    {
-      "id": 44,
-      "procedure": {
-        "id": 102,
-        "orderNo": "ORD-2024-001",
-        "machineNo": "03",
-        "name": "PCB焊接",
-        "duration": 1000,
-        "procedureNo": 20,
-        "nextProcedureNo": [
-          30
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 1,
-        "name": "电子元件组装",
-        "orderNo": "ORD-2024-001",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 3,
-        "name": "Machine 3",
-        "machineNo": "03",
-        "model": "M3"
-      },
-      "maintenance": {
-        "id": 8,
-        "machine": {
-          "id": 1,
-          "name": "Machine 1",
-          "machineNo": "01",
-          "model": "M1"
-        },
-        "date": "2024-10-23",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 40,
-      "dateTime": "2024-10-23T15:00:00",
-      "manual": false
-    },
-    {
-      "id": 45,
-      "procedure": {
-        "id": 103,
-        "orderNo": "ORD-2024-001",
-        "machineNo": "02",
-        "name": "功能测试",
-        "duration": 1200,
-        "procedureNo": 30,
-        "nextProcedureNo": [
-          40
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-28T09:00:00",
+        "endTime": "2024-11-04T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -2303,166 +2113,12 @@
         "model": "M2"
       },
       "maintenance": {
-        "id": 67,
-        "machine": {
-          "id": 5,
-          "name": "Machine 5",
-          "machineNo": "05",
-          "model": "M5"
-        },
-        "date": "2024-10-26",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-27T03:00:00",
-      "manual": false
-    },
-    {
-      "id": 46,
-      "procedure": {
-        "id": 103,
-        "orderNo": "ORD-2024-001",
-        "machineNo": "02",
-        "name": "功能测试",
-        "duration": 1200,
-        "procedureNo": 30,
-        "nextProcedureNo": [
-          40
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 1,
-        "name": "电子元件组装",
-        "orderNo": "ORD-2024-001",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 2,
-        "name": "Machine 2",
-        "machineNo": "02",
-        "model": "M2"
-      },
-      "maintenance": {
-        "id": 38,
-        "machine": {
-          "id": 3,
-          "name": "Machine 3",
-          "machineNo": "03",
-          "model": "M3"
-        },
-        "date": "2024-10-25",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-25T17:00:00",
-      "manual": false
-    },
-    {
-      "id": 47,
-      "procedure": {
-        "id": 103,
-        "orderNo": "ORD-2024-001",
-        "machineNo": "02",
-        "name": "功能测试",
-        "duration": 1200,
-        "procedureNo": 30,
-        "nextProcedureNo": [
-          40
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 1,
-        "name": "电子元件组装",
-        "orderNo": "ORD-2024-001",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 2,
-        "name": "Machine 2",
-        "machineNo": "02",
-        "model": "M2"
-      },
-      "maintenance": {
-        "id": 26,
+        "id": 41,
         "machine": {
           "id": 2,
           "name": "Machine 2",
           "machineNo": "02",
           "model": "M2"
-        },
-        "date": "2024-10-27",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 240,
-      "dateTime": "2024-10-28T21:00:00",
-      "manual": false
-    },
-    {
-      "id": 48,
-      "procedure": {
-        "id": 104,
-        "orderNo": "ORD-2024-001",
-        "machineNo": "01",
-        "name": "包装",
-        "duration": 480,
-        "procedureNo": 40,
-        "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 1,
-        "name": "电子元件组装",
-        "orderNo": "ORD-2024-001",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 1,
-        "name": "Machine 1",
-        "machineNo": "01",
-        "model": "M1"
-      },
-      "maintenance": {
-        "id": 56,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
         },
         "date": "2024-10-29",
         "capacity": 480,
@@ -2470,10 +2126,258 @@
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-29T17:00:00",
+      "dateTime": "2024-10-29T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 44,
+      "procedure": {
+        "id": 102,
+        "orderNo": "ORD-2024-001",
+        "machineNo": "02",
+        "name": "PCB焊接",
+        "duration": 1000,
+        "procedureNo": 20,
+        "nextProcedureNo": [
+          30
+        ],
+        "startTime": "2024-10-28T09:00:00",
+        "endTime": "2024-11-04T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 1,
+        "name": "电子元件组装",
+        "orderNo": "ORD-2024-001",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
+      },
+      "maintenance": {
+        "id": 42,
+        "machine": {
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
+        },
+        "date": "2024-10-30",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 40
+      },
+      "dailyHours": 40,
+      "dateTime": "2024-10-30T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 45,
+      "procedure": {
+        "id": 103,
+        "orderNo": "ORD-2024-001",
+        "machineNo": "03",
+        "name": "功能测试",
+        "duration": 1200,
+        "procedureNo": 30,
+        "nextProcedureNo": [
+          40
+        ],
+        "startTime": "2024-10-20T09:00:00",
+        "endTime": "2024-11-07T13:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 1,
+        "name": "电子元件组装",
+        "orderNo": "ORD-2024-001",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 3,
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
+      },
+      "maintenance": {
+        "id": 82,
+        "machine": {
+          "id": 3,
+          "name": "Machine 3",
+          "machineNo": "03",
+          "model": "M3"
+        },
+        "date": "2024-11-11",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-11T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 46,
+      "procedure": {
+        "id": 103,
+        "orderNo": "ORD-2024-001",
+        "machineNo": "03",
+        "name": "功能测试",
+        "duration": 1200,
+        "procedureNo": 30,
+        "nextProcedureNo": [
+          40
+        ],
+        "startTime": "2024-10-20T09:00:00",
+        "endTime": "2024-11-07T13:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 1,
+        "name": "电子元件组装",
+        "orderNo": "ORD-2024-001",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 3,
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
+      },
+      "maintenance": {
+        "id": 75,
+        "machine": {
+          "id": 3,
+          "name": "Machine 3",
+          "machineNo": "03",
+          "model": "M3"
+        },
+        "date": "2024-11-04",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-04T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 47,
+      "procedure": {
+        "id": 103,
+        "orderNo": "ORD-2024-001",
+        "machineNo": "03",
+        "name": "功能测试",
+        "duration": 1200,
+        "procedureNo": 30,
+        "nextProcedureNo": [
+          40
+        ],
+        "startTime": "2024-10-20T09:00:00",
+        "endTime": "2024-11-07T13:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 1,
+        "name": "电子元件组装",
+        "orderNo": "ORD-2024-001",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 3,
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
+      },
+      "maintenance": {
+        "id": 78,
+        "machine": {
+          "id": 3,
+          "name": "Machine 3",
+          "machineNo": "03",
+          "model": "M3"
+        },
+        "date": "2024-11-07",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 240
+      },
+      "dailyHours": 240,
+      "dateTime": "2024-11-07T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 48,
+      "procedure": {
+        "id": 104,
+        "orderNo": "ORD-2024-001",
+        "machineNo": "04",
+        "name": "包装",
+        "duration": 480,
+        "procedureNo": 40,
+        "nextProcedureNo": [],
+        "startTime": "2024-10-27T09:00:00",
+        "endTime": "2024-10-27T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 1,
+        "name": "电子元件组装",
+        "orderNo": "ORD-2024-001",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 4,
+        "name": "Machine 4",
+        "machineNo": "04",
+        "model": "M4"
+      },
+      "maintenance": {
+        "id": 112,
+        "machine": {
+          "id": 4,
+          "name": "Machine 4",
+          "machineNo": "04",
+          "model": "M4"
+        },
+        "date": "2024-11-13",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-13T09:00:00",
       "manual": false
     },
     {
@@ -2488,10 +2392,8 @@
         "nextProcedureNo": [
           20
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-25T09:00:00",
+        "endTime": "2024-11-03T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -2509,23 +2411,23 @@
         "model": "M1"
       },
       "maintenance": {
-        "id": 4,
+        "id": 9,
         "machine": {
           "id": 1,
           "name": "Machine 1",
           "machineNo": "01",
           "model": "M1"
         },
-        "date": "2024-10-19",
+        "date": "2024-10-25",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-19T17:00:00",
+      "dateTime": "2024-10-25T09:00:00",
       "manual": false
     },
     {
@@ -2540,10 +2442,8 @@
         "nextProcedureNo": [
           20
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-25T09:00:00",
+        "endTime": "2024-11-03T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -2561,23 +2461,23 @@
         "model": "M1"
       },
       "maintenance": {
-        "id": 12,
+        "id": 26,
         "machine": {
           "id": 1,
           "name": "Machine 1",
           "machineNo": "01",
           "model": "M1"
         },
-        "date": "2024-10-27",
+        "date": "2024-11-11",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-27T17:00:00",
+      "dateTime": "2024-11-11T09:00:00",
       "manual": false
     },
     {
@@ -2592,10 +2492,8 @@
         "nextProcedureNo": [
           20
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-25T09:00:00",
+        "endTime": "2024-11-03T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -2613,23 +2511,23 @@
         "model": "M1"
       },
       "maintenance": {
-        "id": 9,
+        "id": 16,
         "machine": {
           "id": 1,
           "name": "Machine 1",
           "machineNo": "01",
           "model": "M1"
         },
-        "date": "2024-10-24",
+        "date": "2024-11-01",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 960
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-25T01:00:00",
+      "dateTime": "2024-11-01T09:00:00",
       "manual": false
     },
     {
@@ -2637,17 +2535,15 @@
       "procedure": {
         "id": 202,
         "orderNo": "ORD-2024-002",
-        "machineNo": "04",
+        "machineNo": "02",
         "name": "机床加工",
         "duration": 480,
         "procedureNo": 20,
         "nextProcedureNo": [
           30
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-11-06T09:00:00",
+        "endTime": "2024-11-06T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -2659,29 +2555,29 @@
         "endDate": null
       },
       "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
       },
       "maintenance": {
-        "id": 13,
+        "id": 55,
         "machine": {
-          "id": 1,
-          "name": "Machine 1",
-          "machineNo": "01",
-          "model": "M1"
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
         },
-        "date": "2024-10-28",
+        "date": "2024-11-12",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-29T08:00:00",
+      "dateTime": "2024-11-12T09:00:00",
       "manual": false
     },
     {
@@ -2689,17 +2585,15 @@
       "procedure": {
         "id": 203,
         "orderNo": "ORD-2024-002",
-        "machineNo": "05",
+        "machineNo": "03",
         "name": "热处理",
         "duration": 960,
         "procedureNo": 30,
         "nextProcedureNo": [
           40
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-29T09:00:00",
+        "endTime": "2024-11-06T01:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -2711,29 +2605,29 @@
         "endDate": null
       },
       "machine": {
-        "id": 5,
-        "name": "Machine 5",
-        "machineNo": "05",
-        "model": "M5"
+        "id": 3,
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
       },
       "maintenance": {
-        "id": 58,
+        "id": 66,
         "machine": {
-          "id": 5,
-          "name": "Machine 5",
-          "machineNo": "05",
-          "model": "M5"
+          "id": 3,
+          "name": "Machine 3",
+          "machineNo": "03",
+          "model": "M3"
         },
-        "date": "2024-10-17",
+        "date": "2024-10-26",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-17T17:00:00",
+      "dateTime": "2024-10-26T09:00:00",
       "manual": false
     },
     {
@@ -2741,17 +2635,15 @@
       "procedure": {
         "id": 203,
         "orderNo": "ORD-2024-002",
-        "machineNo": "05",
+        "machineNo": "03",
         "name": "热处理",
         "duration": 960,
         "procedureNo": 30,
         "nextProcedureNo": [
           40
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-29T09:00:00",
+        "endTime": "2024-11-06T01:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -2763,324 +2655,18 @@
         "endDate": null
       },
       "machine": {
-        "id": 5,
-        "name": "Machine 5",
-        "machineNo": "05",
-        "model": "M5"
+        "id": 3,
+        "name": "Machine 3",
+        "machineNo": "03",
+        "model": "M3"
       },
       "maintenance": {
-        "id": 57,
+        "id": 69,
         "machine": {
-          "id": 5,
-          "name": "Machine 5",
-          "machineNo": "05",
-          "model": "M5"
-        },
-        "date": "2024-10-16",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-16T17:00:00",
-      "manual": false
-    },
-    {
-      "id": 55,
-      "procedure": {
-        "id": 204,
-        "orderNo": "ORD-2024-002",
-        "machineNo": "05",
-        "name": "精加工",
-        "duration": 1000,
-        "procedureNo": 40,
-        "nextProcedureNo": [
-          50
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 2,
-        "name": "机械零件加工",
-        "orderNo": "ORD-2024-002",
-        "priority": 1,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 5,
-        "name": "Machine 5",
-        "machineNo": "05",
-        "model": "M5"
-      },
-      "maintenance": {
-        "id": 61,
-        "machine": {
-          "id": 5,
-          "name": "Machine 5",
-          "machineNo": "05",
-          "model": "M5"
-        },
-        "date": "2024-10-20",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-20T17:00:00",
-      "manual": false
-    },
-    {
-      "id": 56,
-      "procedure": {
-        "id": 204,
-        "orderNo": "ORD-2024-002",
-        "machineNo": "05",
-        "name": "精加工",
-        "duration": 1000,
-        "procedureNo": 40,
-        "nextProcedureNo": [
-          50
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 2,
-        "name": "机械零件加工",
-        "orderNo": "ORD-2024-002",
-        "priority": 1,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 5,
-        "name": "Machine 5",
-        "machineNo": "05",
-        "model": "M5"
-      },
-      "maintenance": {
-        "id": 63,
-        "machine": {
-          "id": 5,
-          "name": "Machine 5",
-          "machineNo": "05",
-          "model": "M5"
-        },
-        "date": "2024-10-22",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-23T00:00:00",
-      "manual": false
-    },
-    {
-      "id": 57,
-      "procedure": {
-        "id": 204,
-        "orderNo": "ORD-2024-002",
-        "machineNo": "05",
-        "name": "精加工",
-        "duration": 1000,
-        "procedureNo": 40,
-        "nextProcedureNo": [
-          50
-        ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 2,
-        "name": "机械零件加工",
-        "orderNo": "ORD-2024-002",
-        "priority": 1,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 5,
-        "name": "Machine 5",
-        "machineNo": "05",
-        "model": "M5"
-      },
-      "maintenance": {
-        "id": 62,
-        "machine": {
-          "id": 5,
-          "name": "Machine 5",
-          "machineNo": "05",
-          "model": "M5"
-        },
-        "date": "2024-10-21",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 40,
-      "dateTime": "2024-10-21T09:40:00",
-      "manual": false
-    },
-    {
-      "id": 58,
-      "procedure": {
-        "id": 205,
-        "orderNo": "ORD-2024-002",
-        "machineNo": "04",
-        "name": "质量检测",
-        "duration": 1200,
-        "procedureNo": 50,
-        "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 2,
-        "name": "机械零件加工",
-        "orderNo": "ORD-2024-002",
-        "priority": 1,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
-      },
-      "maintenance": {
-        "id": 52,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
-        },
-        "date": "2024-10-25",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-26T09:00:00",
-      "manual": false
-    },
-    {
-      "id": 59,
-      "procedure": {
-        "id": 205,
-        "orderNo": "ORD-2024-002",
-        "machineNo": "04",
-        "name": "质量检测",
-        "duration": 1200,
-        "procedureNo": 50,
-        "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 2,
-        "name": "机械零件加工",
-        "orderNo": "ORD-2024-002",
-        "priority": 1,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
-      },
-      "maintenance": {
-        "id": 49,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
-        },
-        "date": "2024-10-22",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-24T01:00:00",
-      "manual": false
-    },
-    {
-      "id": 60,
-      "procedure": {
-        "id": 205,
-        "orderNo": "ORD-2024-002",
-        "machineNo": "04",
-        "name": "质量检测",
-        "duration": 1200,
-        "procedureNo": 50,
-        "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 2,
-        "name": "机械零件加工",
-        "orderNo": "ORD-2024-002",
-        "priority": 1,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 4,
-        "name": "Machine 4",
-        "machineNo": "04",
-        "model": "M4"
-      },
-      "maintenance": {
-        "id": 56,
-        "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
+          "id": 3,
+          "name": "Machine 3",
+          "machineNo": "03",
+          "model": "M3"
         },
         "date": "2024-10-29",
         "capacity": 480,
@@ -3088,10 +2674,304 @@
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-10-29T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 55,
+      "procedure": {
+        "id": 204,
+        "orderNo": "ORD-2024-002",
+        "machineNo": "04",
+        "name": "精加工",
+        "duration": 1000,
+        "procedureNo": 40,
+        "nextProcedureNo": [
+          50
+        ],
+        "startTime": "2024-11-03T09:00:00",
+        "endTime": "2024-11-10T09:40:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 2,
+        "name": "机械零件加工",
+        "orderNo": "ORD-2024-002",
+        "priority": 1,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 4,
+        "name": "Machine 4",
+        "machineNo": "04",
+        "model": "M4"
+      },
+      "maintenance": {
+        "id": 102,
+        "machine": {
+          "id": 4,
+          "name": "Machine 4",
+          "machineNo": "04",
+          "model": "M4"
+        },
+        "date": "2024-11-03",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-03T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 56,
+      "procedure": {
+        "id": 204,
+        "orderNo": "ORD-2024-002",
+        "machineNo": "04",
+        "name": "精加工",
+        "duration": 1000,
+        "procedureNo": 40,
+        "nextProcedureNo": [
+          50
+        ],
+        "startTime": "2024-11-03T09:00:00",
+        "endTime": "2024-11-10T09:40:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 2,
+        "name": "机械零件加工",
+        "orderNo": "ORD-2024-002",
+        "priority": 1,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 4,
+        "name": "Machine 4",
+        "machineNo": "04",
+        "model": "M4"
+      },
+      "maintenance": {
+        "id": 104,
+        "machine": {
+          "id": 4,
+          "name": "Machine 4",
+          "machineNo": "04",
+          "model": "M4"
+        },
+        "date": "2024-11-05",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-05T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 57,
+      "procedure": {
+        "id": 204,
+        "orderNo": "ORD-2024-002",
+        "machineNo": "04",
+        "name": "精加工",
+        "duration": 1000,
+        "procedureNo": 40,
+        "nextProcedureNo": [
+          50
+        ],
+        "startTime": "2024-11-03T09:00:00",
+        "endTime": "2024-11-10T09:40:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 2,
+        "name": "机械零件加工",
+        "orderNo": "ORD-2024-002",
+        "priority": 1,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 4,
+        "name": "Machine 4",
+        "machineNo": "04",
+        "model": "M4"
+      },
+      "maintenance": {
+        "id": 103,
+        "machine": {
+          "id": 4,
+          "name": "Machine 4",
+          "machineNo": "04",
+          "model": "M4"
+        },
+        "date": "2024-11-04",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 40
+      },
+      "dailyHours": 40,
+      "dateTime": "2024-11-04T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 58,
+      "procedure": {
+        "id": 205,
+        "orderNo": "ORD-2024-002",
+        "machineNo": "05",
+        "name": "质量检测",
+        "duration": 1200,
+        "procedureNo": 50,
+        "nextProcedureNo": [],
+        "startTime": "2024-11-01T17:00:00",
+        "endTime": "2024-11-09T13:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 2,
+        "name": "机械零件加工",
+        "orderNo": "ORD-2024-002",
+        "priority": 1,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 5,
+        "name": "Machine 5",
+        "machineNo": "05",
+        "model": "M5"
+      },
+      "maintenance": {
+        "id": 134,
+        "machine": {
+          "id": 5,
+          "name": "Machine 5",
+          "machineNo": "05",
+          "model": "M5"
+        },
+        "date": "2024-11-07",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-07T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 59,
+      "procedure": {
+        "id": 205,
+        "orderNo": "ORD-2024-002",
+        "machineNo": "05",
+        "name": "质量检测",
+        "duration": 1200,
+        "procedureNo": 50,
+        "nextProcedureNo": [],
+        "startTime": "2024-11-01T17:00:00",
+        "endTime": "2024-11-09T13:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 2,
+        "name": "机械零件加工",
+        "orderNo": "ORD-2024-002",
+        "priority": 1,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 5,
+        "name": "Machine 5",
+        "machineNo": "05",
+        "model": "M5"
+      },
+      "maintenance": {
+        "id": 135,
+        "machine": {
+          "id": 5,
+          "name": "Machine 5",
+          "machineNo": "05",
+          "model": "M5"
+        },
+        "date": "2024-11-08",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-08T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 60,
+      "procedure": {
+        "id": 205,
+        "orderNo": "ORD-2024-002",
+        "machineNo": "05",
+        "name": "质量检测",
+        "duration": 1200,
+        "procedureNo": 50,
+        "nextProcedureNo": [],
+        "startTime": "2024-11-01T17:00:00",
+        "endTime": "2024-11-09T13:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 2,
+        "name": "机械零件加工",
+        "orderNo": "ORD-2024-002",
+        "priority": 1,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 5,
+        "name": "Machine 5",
+        "machineNo": "05",
+        "model": "M5"
+      },
+      "maintenance": {
+        "id": 136,
+        "machine": {
+          "id": 5,
+          "name": "Machine 5",
+          "machineNo": "05",
+          "model": "M5"
+        },
+        "date": "2024-11-09",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 240
       },
       "dailyHours": 240,
-      "dateTime": "2024-10-29T21:00:00",
+      "dateTime": "2024-11-09T09:00:00",
       "manual": false
     },
     {
@@ -3106,10 +2986,8 @@
         "nextProcedureNo": [
           20
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-11-05T09:00:00",
+        "endTime": "2024-11-11T11:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -3127,23 +3005,23 @@
         "model": "M1"
       },
       "maintenance": {
-        "id": 9,
+        "id": 20,
         "machine": {
           "id": 1,
           "name": "Machine 1",
           "machineNo": "01",
           "model": "M1"
         },
-        "date": "2024-10-24",
+        "date": "2024-11-05",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-25T01:00:00",
+      "dateTime": "2024-11-05T09:00:00",
       "manual": false
     },
     {
@@ -3158,10 +3036,8 @@
         "nextProcedureNo": [
           20
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-11-05T09:00:00",
+        "endTime": "2024-11-11T11:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -3179,23 +3055,23 @@
         "model": "M1"
       },
       "maintenance": {
-        "id": 1,
+        "id": 5,
         "machine": {
           "id": 1,
           "name": "Machine 1",
           "machineNo": "01",
           "model": "M1"
         },
-        "date": "2024-10-16",
+        "date": "2024-10-21",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 120
       },
       "dailyHours": 120,
-      "dateTime": "2024-10-16T11:00:00",
+      "dateTime": "2024-10-21T09:00:00",
       "manual": false
     },
     {
@@ -3203,17 +3079,15 @@
       "procedure": {
         "id": 1002,
         "orderNo": "ORD-2024-010",
-        "machineNo": "03",
+        "machineNo": "02",
         "name": "压缩机安装",
         "duration": 600,
         "procedureNo": 20,
         "nextProcedureNo": [
           30
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-21T09:00:00",
+        "endTime": "2024-11-07T11:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -3225,29 +3099,29 @@
         "endDate": null
       },
       "machine": {
-        "id": 3,
-        "name": "Machine 3",
-        "machineNo": "03",
-        "model": "M3"
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
       },
       "maintenance": {
-        "id": 53,
+        "id": 49,
         "machine": {
-          "id": 4,
-          "name": "Machine 4",
-          "machineNo": "04",
-          "model": "M4"
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
         },
-        "date": "2024-10-26",
+        "date": "2024-11-06",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-26T17:00:00",
+      "dateTime": "2024-11-06T09:00:00",
       "manual": false
     },
     {
@@ -3255,17 +3129,15 @@
       "procedure": {
         "id": 1002,
         "orderNo": "ORD-2024-010",
-        "machineNo": "03",
+        "machineNo": "02",
         "name": "压缩机安装",
         "duration": 600,
         "procedureNo": 20,
         "nextProcedureNo": [
           30
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-21T09:00:00",
+        "endTime": "2024-11-07T11:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -3277,29 +3149,29 @@
         "endDate": null
       },
       "machine": {
-        "id": 3,
-        "name": "Machine 3",
-        "machineNo": "03",
-        "model": "M3"
+        "id": 2,
+        "name": "Machine 2",
+        "machineNo": "02",
+        "model": "M2"
       },
       "maintenance": {
-        "id": 37,
+        "id": 50,
         "machine": {
-          "id": 3,
-          "name": "Machine 3",
-          "machineNo": "03",
-          "model": "M3"
+          "id": 2,
+          "name": "Machine 2",
+          "machineNo": "02",
+          "model": "M2"
         },
-        "date": "2024-10-24",
+        "date": "2024-11-07",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 160
       },
       "dailyHours": 120,
-      "dateTime": "2024-10-25T11:00:00",
+      "dateTime": "2024-11-07T09:00:00",
       "manual": false
     },
     {
@@ -3314,10 +3186,8 @@
         "nextProcedureNo": [
           40
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-11-04T09:00:00",
+        "endTime": "2024-11-09T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -3335,23 +3205,23 @@
         "model": "M3"
       },
       "maintenance": {
-        "id": 40,
+        "id": 80,
         "machine": {
           "id": 3,
           "name": "Machine 3",
           "machineNo": "03",
           "model": "M3"
         },
-        "date": "2024-10-27",
+        "date": "2024-11-09",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-27T17:00:00",
+      "dateTime": "2024-11-09T09:00:00",
       "manual": false
     },
     {
@@ -3366,10 +3236,8 @@
         "nextProcedureNo": [
           40
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-11-04T09:00:00",
+        "endTime": "2024-11-09T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -3387,23 +3255,23 @@
         "model": "M3"
       },
       "maintenance": {
-        "id": 39,
+        "id": 81,
         "machine": {
           "id": 3,
           "name": "Machine 3",
           "machineNo": "03",
           "model": "M3"
         },
-        "date": "2024-10-26",
+        "date": "2024-11-10",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-26T17:00:00",
+      "dateTime": "2024-11-10T09:00:00",
       "manual": false
     },
     {
@@ -3411,67 +3279,15 @@
       "procedure": {
         "id": 1004,
         "orderNo": "ORD-2024-010",
-        "machineNo": "05",
+        "machineNo": "04",
         "name": "系统调试",
         "duration": 480,
         "procedureNo": 40,
         "nextProcedureNo": [
           50
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 10,
-        "name": "工业冷却系统安装",
-        "orderNo": "ORD-2024-010",
-        "priority": 1,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 5,
-        "name": "Machine 5",
-        "machineNo": "05",
-        "model": "M5"
-      },
-      "maintenance": {
-        "id": 26,
-        "machine": {
-          "id": 2,
-          "name": "Machine 2",
-          "machineNo": "02",
-          "model": "M2"
-        },
-        "date": "2024-10-27",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-28T21:00:00",
-      "manual": false
-    },
-    {
-      "id": 68,
-      "procedure": {
-        "id": 1005,
-        "orderNo": "ORD-2024-010",
-        "machineNo": "04",
-        "name": "性能测试",
-        "duration": 480,
-        "procedureNo": 50,
-        "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-11-03T09:00:00",
+        "endTime": "2024-11-03T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -3489,23 +3305,71 @@
         "model": "M4"
       },
       "maintenance": {
-        "id": 49,
+        "id": 111,
         "machine": {
           "id": 4,
           "name": "Machine 4",
           "machineNo": "04",
           "model": "M4"
         },
-        "date": "2024-10-22",
+        "date": "2024-11-12",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 960
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-24T01:00:00",
+      "dateTime": "2024-11-12T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 68,
+      "procedure": {
+        "id": 1005,
+        "orderNo": "ORD-2024-010",
+        "machineNo": "05",
+        "name": "性能测试",
+        "duration": 480,
+        "procedureNo": 50,
+        "nextProcedureNo": [],
+        "startTime": "2024-11-03T09:00:00",
+        "endTime": "2024-11-03T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 10,
+        "name": "工业冷却系统安装",
+        "orderNo": "ORD-2024-010",
+        "priority": 1,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 5,
+        "name": "Machine 5",
+        "machineNo": "05",
+        "model": "M5"
+      },
+      "maintenance": {
+        "id": 140,
+        "machine": {
+          "id": 5,
+          "name": "Machine 5",
+          "machineNo": "05",
+          "model": "M5"
+        },
+        "date": "2024-11-13",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 480
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-13T09:00:00",
       "manual": false
     },
     {
@@ -3520,10 +3384,8 @@
         "nextProcedureNo": [
           20
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-25T17:00:00",
+        "endTime": "2024-10-26T01:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -3541,23 +3403,23 @@
         "model": "M1"
       },
       "maintenance": {
-        "id": 3,
+        "id": 18,
         "machine": {
           "id": 1,
           "name": "Machine 1",
           "machineNo": "01",
           "model": "M1"
         },
-        "date": "2024-10-18",
+        "date": "2024-11-03",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-19T03:00:00",
+      "dateTime": "2024-11-03T09:00:00",
       "manual": false
     },
     {
@@ -3572,10 +3434,8 @@
         "nextProcedureNo": [
           30
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-22T09:00:00",
+        "endTime": "2024-11-04T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -3593,23 +3453,23 @@
         "model": "M2"
       },
       "maintenance": {
-        "id": 22,
+        "id": 47,
         "machine": {
           "id": 2,
           "name": "Machine 2",
           "machineNo": "02",
           "model": "M2"
         },
-        "date": "2024-10-23",
+        "date": "2024-11-04",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-23T17:00:00",
+      "dateTime": "2024-11-04T09:00:00",
       "manual": false
     },
     {
@@ -3624,10 +3484,8 @@
         "nextProcedureNo": [
           30
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-10-22T09:00:00",
+        "endTime": "2024-11-04T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -3645,23 +3503,23 @@
         "model": "M2"
       },
       "maintenance": {
-        "id": 26,
+        "id": 53,
         "machine": {
           "id": 2,
           "name": "Machine 2",
           "machineNo": "02",
           "model": "M2"
         },
-        "date": "2024-10-27",
+        "date": "2024-11-10",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-28T21:00:00",
+      "dateTime": "2024-11-10T09:00:00",
       "manual": false
     },
     {
@@ -3676,10 +3534,8 @@
         "nextProcedureNo": [
           40
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-11-03T09:00:00",
+        "endTime": "2024-11-03T17:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -3697,23 +3553,23 @@
         "model": "M3"
       },
       "maintenance": {
-        "id": 37,
+        "id": 83,
         "machine": {
           "id": 3,
           "name": "Machine 3",
           "machineNo": "03",
           "model": "M3"
         },
-        "date": "2024-10-24",
+        "date": "2024-11-12",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-25T11:00:00",
+      "dateTime": "2024-11-12T09:00:00",
       "manual": false
     },
     {
@@ -3721,17 +3577,63 @@
       "procedure": {
         "id": 904,
         "orderNo": "ORD-2024-009",
-        "machineNo": "05",
+        "machineNo": "04",
         "name": "效率测试",
         "duration": 480,
         "procedureNo": 40,
         "nextProcedureNo": [
           50
         ],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
+        "startTime": "2024-11-02T09:00:00",
+        "endTime": "2024-11-02T17:00:00",
+        "status": "PENDING"
+      },
+      "order": {
+        "id": 9,
+        "name": "太阳能面板组装",
+        "orderNo": "ORD-2024-009",
+        "priority": 2,
+        "startDate": null,
+        "endDate": null
+      },
+      "machine": {
+        "id": 4,
+        "name": "Machine 4",
+        "machineNo": "04",
+        "model": "M4"
+      },
+      "maintenance": {
+        "id": 109,
+        "machine": {
+          "id": 4,
+          "name": "Machine 4",
+          "machineNo": "04",
+          "model": "M4"
+        },
+        "date": "2024-11-10",
+        "capacity": 480,
+        "status": "IDLE",
+        "description": null,
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "usageTime": 960
+      },
+      "dailyHours": 480,
+      "dateTime": "2024-11-10T09:00:00",
+      "manual": false
+    },
+    {
+      "id": 74,
+      "procedure": {
+        "id": 905,
+        "orderNo": "ORD-2024-009",
+        "machineNo": "05",
+        "name": "防水处理",
+        "duration": 480,
+        "procedureNo": 50,
+        "nextProcedureNo": [],
+        "startTime": "2024-10-20T17:00:00",
+        "endTime": "2024-10-21T01:00:00",
         "status": "PENDING"
       },
       "order": {
@@ -3749,73 +3651,23 @@
         "model": "M5"
       },
       "maintenance": {
-        "id": 37,
+        "id": 138,
         "machine": {
-          "id": 3,
-          "name": "Machine 3",
-          "machineNo": "03",
-          "model": "M3"
+          "id": 5,
+          "name": "Machine 5",
+          "machineNo": "05",
+          "model": "M5"
         },
-        "date": "2024-10-24",
+        "date": "2024-11-11",
         "capacity": 480,
         "status": "IDLE",
         "description": null,
         "startTime": "09:00:00",
         "endTime": "17:00:00",
-        "usageTime": 0
+        "usageTime": 480
       },
       "dailyHours": 480,
-      "dateTime": "2024-10-25T11:00:00",
-      "manual": false
-    },
-    {
-      "id": 74,
-      "procedure": {
-        "id": 905,
-        "orderNo": "ORD-2024-009",
-        "machineNo": "01",
-        "name": "防水处理",
-        "duration": 480,
-        "procedureNo": 50,
-        "nextProcedureNo": [],
-        "planStartDate": null,
-        "planEndDate": null,
-        "startTime": null,
-        "endTime": null,
-        "status": "PENDING"
-      },
-      "order": {
-        "id": 9,
-        "name": "太阳能面板组装",
-        "orderNo": "ORD-2024-009",
-        "priority": 2,
-        "startDate": null,
-        "endDate": null
-      },
-      "machine": {
-        "id": 1,
-        "name": "Machine 1",
-        "machineNo": "01",
-        "model": "M1"
-      },
-      "maintenance": {
-        "id": 13,
-        "machine": {
-          "id": 1,
-          "name": "Machine 1",
-          "machineNo": "01",
-          "model": "M1"
-        },
-        "date": "2024-10-28",
-        "capacity": 480,
-        "status": "IDLE",
-        "description": null,
-        "startTime": "09:00:00",
-        "endTime": "17:00:00",
-        "usageTime": 0
-      },
-      "dailyHours": 480,
-      "dateTime": "2024-10-29T08:00:00",
+      "dateTime": "2024-11-11T09:00:00",
       "manual": false
     }
   ],
