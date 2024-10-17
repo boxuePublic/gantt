@@ -261,6 +261,10 @@ layui.use(['layer', 'form', 'laydate'], function () {
         }
 
         return html;
+      },
+      // 提交排产函数
+      submitScheduling: function (index_1, index_2) {
+        console.log('submitScheduling-排产', index_1, index_2);
       }
     });
 

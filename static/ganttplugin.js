@@ -12,7 +12,7 @@ const GanttChart = function () {
     gantt_header_height: 40, // 表头高度
     resizer_x_left: 500, // 左侧渲染区域的宽度
     columns: [],
-    operationCache: {}, // 操作缓存的
+    // operationCache: {}, // 操作缓存的
     start_time: null, // 开始时间
     end_time: null, // 结束时间
     task_start_end_data: [], // 任务开始结束时间数据
@@ -37,11 +37,9 @@ const GanttChart = function () {
 
     dragMiddleObj: {},// 用于拖拽中间的对象
 
-    // taskResizeCallback: null, // 任务调整大小回调函数
-    // taskDragCallback: null, // 任务拖拽回调函数
-    // taskDeleteCallback: null, // 任务删除回调函数
-
     floatingPanelContent: function () { return '' },// 悬浮面板返回函数，由外部定义
+
+    submitScheduling: function (params) { },// 提交排产函数
 
     // 获取两个日期之间的数组
     getDatesBetween: function (startTime, endTime) {
@@ -314,6 +312,7 @@ const GanttChart = function () {
 
         // left计算
         const left = _this.calculateLeftPosition(task_start_end_data[0], start_time);
+
         // width计算
         const curWidth = _this.calculateTaskWidth(start_time, end_time);
         taskHtml += '<div class="gantt_task_cell" data-index_1=\'' + index_1 + '\' data-index_2=\'' + i + '\' style="left:' + left + 'px;width:' + curWidth + 'px;"></div>';
@@ -438,6 +437,35 @@ const GanttChart = function () {
       // 
     },
 
+    // 可拖拽时间范围
+    DraggableTimeRange: function (index_1, index_2) {
+      const _this = this;
+      let prevNodeEndTime = _this.start_time + ' 00:00:00';
+      let nextNodeStartTime = _this.end_time + ' 23:59:59';
+
+      // 获取前置节点的结束时间
+      if (index_2 - 1 >= 0) {
+        prevNodeEndTime = _this.gantt_data[index_1].taskArr[index_2 - 1].end_time;
+      } else {
+        if (index_1 - 1 >= 0) {
+          const prevTaskLen = _this.gantt_data[index_1 - 1].taskArr.length;
+          prevNodeEndTime = _this.gantt_data[index_1 - 1].taskArr[prevTaskLen - 1].end_time;
+        }
+      }
+
+      // 获取后一个节点的开始时间
+      const taskArr_length = _this.gantt_data[index_1].taskArr.length;
+      if (index_2 + 1 < taskArr_length) {
+        nextNodeStartTime = _this.gantt_data[index_1].taskArr[index_2 + 1].start_time;
+      } else {
+        if (index_1 + 1 < _this.gantt_data.length) {
+          nextNodeStartTime = _this.gantt_data[index_1 + 1].taskArr[0].start_time;
+        }
+      }
+
+      return [prevNodeEndTime, nextNodeStartTime];
+    },
+
     // 任务的拖拽事件
     taskDragEvent: function () {
       const _this = this;
@@ -466,45 +494,47 @@ const GanttChart = function () {
           const leftNum = e.clientX - parentOffset.left - offsetX;// 左侧的偏移量
           const leftIndex = Math.floor(leftNum / _this.task_cell_width); // 左侧的索引
 
-          let new_start_time = _this.CalculateStartTime(leftNum);
-          console.log(`ganttplugin.js 450 [new_start_time]`, leftNum, leftIndex, new_start_time);
+          let new_start_time = _this.CalculateStartTime(leftNum);// 拖动之后的开始时间
+          let left_num = e.clientX - parentOffset.left - offsetX;// 距离最左侧的时间
 
-          let left_num = e.clientX - parentOffset.left - offsetX;
-
-          const list_len = _this.task_start_end_data.length;
-          // 最小开始时间
-          const min_start_time = _this.task_start_end_data[0] + ' 00:00:00';
-          // 最大结束时间
-          const max_end_time = _this.task_start_end_data[list_len - 1] + ' 23:59:59';
-          let isNextVerify = true;// 是否继续验证
           // 结束时间小于当前时间的不能拖拽
           if (new Date(taskObj.end_time) < new Date()) {
-            isNextVerify = false;
             layer.msg('结束时间小于当前时间的不能拖拽', { icon: 2 });
             return;
           }
+          let dragTimeArr = _this.DraggableTimeRange(index_1, index_2);// 可拖拽时间范围
 
-          // 不能小于表格开始时间
-          if (new Date(new_start_time + ':00') < new Date(min_start_time)) {
-            left_num = 0;
-            new_start_time = min_start_time;
+          // 如果小于可拖拽范围时间
+          if (new Date(new_start_time + ':00') < new Date(dragTimeArr[0])) {
+            const task_start_end_data = _this.task_start_end_data || [];
+            new_start_time = dragTimeArr[0];
+            left_num = _this.calculateLeftPosition(task_start_end_data[0], new_start_time);
           }
-          // 不能大于表格结束时间
-          if (new Date(new_start_time + ':00') > new Date(max_end_time)) {
-            const cur_width = e.target.style.width.replace('px', '');
-            left_num = _this.right_content_width - cur_width;
-            new_start_time = max_end_time;
+
+          // 如果大于可拖拽范围时间
+          const endTime = new Date(new_start_time).getTime() + taskObj.duration * 60 * 1000;// 拖拽之后的结束时间
+          const endTimeStr = CustomDateFtt(endTime, "yyyy-MM-dd hh:mm");
+          if (new Date(endTimeStr) > new Date(dragTimeArr[1])) {
+            const targetTime = new Date(dragTimeArr[1]).getTime();
+            new_start_time = new Date(targetTime - taskObj.duration * 60 * 1000).format('yyyy-MM-dd HH:mm');
+            left_num = _this.calculateLeftPosition(task_start_end_data[0], new_start_time);
           }
-          // 不能小于上一个节点的结束时间
 
-          // 不能大于下一个节点的开始时间
-
-          // 如果小于当下的时间
-
-          console.log('486 left_num', left_num, new_start_time)
           $cell.css({
             left: left_num + 'px',
           });
+
+          // 直接更新实际数据
+          const actual_end_stamp = new Date(new_start_time).getTime() + taskObj.duration * 60 * 1000;
+          const actual_end_time = CustomDateFtt(actual_end_stamp, "yyyy-MM-dd hh:mm");
+          const is_same_day = areSameDay(new_start_time, taskObj.start_time);
+          _this.gantt_data[index_1].taskArr[index_2].start_time = new_start_time;
+          _this.gantt_data[index_1].taskArr[index_2].end_time = actual_end_time;
+
+          // 如果是上一天了，直接提交数据
+          if (is_same_day) {
+            _this.submitScheduling(index_1, index_2);
+          }
         });
 
         $(document).on('mouseup.drag', function () {

@@ -94,6 +94,19 @@ function CustomGtTypeOf(obj) {
   return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
 }
 
+// 判断两个时间是否在同一天
+function areSameDay(date1, date2) {
+  // 确保输入是 Date 对象
+  if (!(date1 instanceof Date) || !(date2 instanceof Date)) {
+    return false;
+  }
+
+  // 提取年、月、日
+  return date1.getFullYear() === date2.getFullYear() &&
+    date1.getMonth() === date2.getMonth() &&
+    date1.getDate() === date2.getDate();
+}
+
 // 分钟转小时，保留一位小数(向下取整)
 function minutesToHours(minutes) {
   if (['', null, undefined].includes(minutes)) {
@@ -274,7 +287,6 @@ function turnDataFn_merge(data = []) {
       v.processes_no === cur_procedureNo
     );
 
-
     const planStartTime = CustomDateFtt(item.maintenance.date + ' 00:00', "yyyy-MM-dd hh:mm");// 工序开始时间
     const planEndTime = getTaskEndTime(item.maintenance.date + ' 00:00', item.dailyHours);// 工序结束时间
     // const planEndTime = getTaskEndTime(item.maintenance.date + ' 00:00', 24 * 60);// 工序结束时间
@@ -283,7 +295,7 @@ function turnDataFn_merge(data = []) {
       arr[existingIndex].taskArr.push({
         "start_time": planStartTime,
         "duration": item.dailyHours,
-        "end_time": planEndTime
+        "end_time": planEndTime,
       });
     } else {
       arr.push({
@@ -308,7 +320,7 @@ function turnDataFn_merge(data = []) {
           {
             "start_time": planStartTime,
             "duration": item.dailyHours,
-            "end_time": planEndTime
+            "end_time": planEndTime,
           }
         ],
         // 维护时间
