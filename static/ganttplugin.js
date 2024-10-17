@@ -283,6 +283,7 @@ const GanttChart = function () {
 
     // 右侧渲染维护时间
     rightMaintenanceHtml: function (item_1) {
+      const _this = this;
       let maintenanceHtml = '';
       const maintenanceTime = item_1.maintenanceTime || []; // 维护时间数组
       for (let i = 0; i < maintenanceTime.length; i++) {
@@ -290,7 +291,7 @@ const GanttChart = function () {
         let end_time = maintenanceTime[i].end_time; // 结束时间
 
         // left计算
-        const left = _this.calculateLeftPosition(task_start_end_data[0], start_time);
+        const left = _this.calculateLeftPosition(_this.task_start_end_data[0], start_time);
         // width计算
         const curWidth = _this.calculateTaskWidth(start_time, end_time);
 
@@ -456,6 +457,7 @@ const GanttChart = function () {
       // 获取后一个节点的开始时间
       const taskArr_length = _this.gantt_data[index_1].taskArr.length;
       if (index_2 + 1 < taskArr_length) {
+        console.log(459, index_2 + 1, _this.gantt_data[index_1].taskArr);
         nextNodeStartTime = _this.gantt_data[index_1].taskArr[index_2 + 1].start_time;
       } else {
         if (index_1 + 1 < _this.gantt_data.length) {
@@ -490,6 +492,7 @@ const GanttChart = function () {
             return;
           }
           console.log('位置', index_1, index_2);
+          const task_start_end_data = _this.task_start_end_data || [];
           const taskObj = _this.gantt_data[index_1].taskArr[index_2];// 当前任务的数据
           const leftNum = e.clientX - parentOffset.left - offsetX;// 左侧的偏移量
           const leftIndex = Math.floor(leftNum / _this.task_cell_width); // 左侧的索引
@@ -506,7 +509,6 @@ const GanttChart = function () {
 
           // 如果小于可拖拽范围时间
           if (new Date(new_start_time + ':00') < new Date(dragTimeArr[0])) {
-            const task_start_end_data = _this.task_start_end_data || [];
             new_start_time = dragTimeArr[0];
             left_num = _this.calculateLeftPosition(task_start_end_data[0], new_start_time);
           }
@@ -516,7 +518,7 @@ const GanttChart = function () {
           const endTimeStr = CustomDateFtt(endTime, "yyyy-MM-dd hh:mm");
           if (new Date(endTimeStr) > new Date(dragTimeArr[1])) {
             const targetTime = new Date(dragTimeArr[1]).getTime();
-            new_start_time = new Date(targetTime - taskObj.duration * 60 * 1000).format('yyyy-MM-dd HH:mm');
+            new_start_time = CustomDateFtt(targetTime - taskObj.duration * 60 * 1000, "yyyy-MM-dd hh:mm");
             left_num = _this.calculateLeftPosition(task_start_end_data[0], new_start_time);
           }
 
