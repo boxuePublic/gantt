@@ -61,22 +61,22 @@ layui.use(['layer', 'form', 'laydate'], function () {
           title: '工单名称',
           field: 'order_name',
           align: 'left',
-          width: 120,
+          width: 170,
         },
         {
           title: '工序名称',
           field: 'processes_name',
           align: 'left',
-          width: 100,
+          width: 170,
         },
         {
           title: '工序号',
           field: 'processes_no',
           align: 'left',
-          width: 60,
+          width: 100,
         },
         {
-          title: '机器', field: '', align: 'left', width: 100, template: function (item1, item2) {
+          title: '机器', field: '', align: 'left', width: 130, template: function (item1, item2) {
             return item1.machine.name
           }
         },

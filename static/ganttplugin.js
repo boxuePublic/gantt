@@ -480,7 +480,7 @@ const GanttChart = function () {
           // 结束时间小于当前时间的不能拖拽
           if (new Date(taskObj.end_time) < new Date()) {
             isNextVerify = false;
-            layer.msg('小于当前时间的不能拖拽', { icon: 2 })
+            layer.msg('结束时间小于当前时间的不能拖拽', { icon: 2 });
             return;
           }
 
