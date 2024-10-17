@@ -456,6 +456,13 @@ const GanttChart = function () {
 
         // 设置鼠标移动和松开事件
         $(document).on('mousemove.drag', function (e) {
+          const index_1 = e.target.getAttribute('data-index_1');
+          const index_2 = e.target.getAttribute('data-index_2');
+          if ([null, undefined].includes(index_1) || [null, undefined].includes(index_2)) {
+            return;
+          }
+          console.log('位置', index_1, index_2);
+          const taskObj = _this.gantt_data[index_1].taskArr[index_2];// 当前任务的数据
           const leftNum = e.clientX - parentOffset.left - offsetX;// 左侧的偏移量
           const leftIndex = Math.floor(leftNum / _this.task_cell_width); // 左侧的索引
 
@@ -469,6 +476,13 @@ const GanttChart = function () {
           const min_start_time = _this.task_start_end_data[0] + ' 00:00:00';
           // 最大结束时间
           const max_end_time = _this.task_start_end_data[list_len - 1] + ' 23:59:59';
+          let isNextVerify = true;// 是否继续验证
+          // 结束时间小于当前时间的不能拖拽
+          if (new Date(taskObj.end_time) < new Date()) {
+            isNextVerify = false;
+            layer.msg('小于当前时间的不能拖拽', { icon: 2 })
+            return;
+          }
 
           // 不能小于表格开始时间
           if (new Date(new_start_time + ':00') < new Date(min_start_time)) {
@@ -484,6 +498,8 @@ const GanttChart = function () {
           // 不能小于上一个节点的结束时间
 
           // 不能大于下一个节点的开始时间
+
+          // 如果小于当下的时间
 
           console.log('486 left_num', left_num, new_start_time)
           $cell.css({

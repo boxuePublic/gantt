@@ -20,6 +20,7 @@ layui.use(['layer', 'form', 'laydate'], function () {
     fullPanel: true
   });
 
+  // 请求数据 
   async function queryData() {
     $.ajax({
       url: "http://192.168.100.102:8081/api/scheduling/solution/1",
